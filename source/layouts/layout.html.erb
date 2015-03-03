@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <title>Анциферов Герман<%= ' - ' + current_article.title unless current_article.nil? %></title>
+
+    <%= stylesheet_link_tag    "application", media: "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
+  </head>
+  <body class="page">
+    <%= partial "partials/header" %>
+    <%= partial "partials/site_menu" %>
+    <section class="blog">
+      <% blog.articles.each do |article| %>
+        <%= partial "partials/article", locals: { article: article } %>
+      <% end %>
+    </section>
+  </body>
+</html>
