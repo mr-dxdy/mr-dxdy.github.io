@@ -2,6 +2,8 @@
   <div class="meta article__meta">
     <time class="meta__time"><%= I18n.l article.date, format: "%A, %-d %B %Y" %></time>
   </div>
-  <h1 class="article__title"><%= article.title.capitalize %></h1>
+  <h1 class="article__title">
+    <%= link_to article.title.capitalize, article, class: 'article__title-link' %>
+  </h1>
   <div class="article__text"><%= article.body %></div>
 </article>
