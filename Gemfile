@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # ruby
-ruby '2.2.0'
+ruby '2.2.1'
 
 # core
 gem "middleman", "~> 3.3.10"
