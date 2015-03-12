@@ -1,6 +1,13 @@
-<header class="header vcard">
-  <div class="vcard__name">Анциферов Герман</div>
-  <div class="vcard__short-bio">
-    Привет, мир! Пишу об английском языке, программировании и о чем-то еще ...
+<header class="header">
+  <div class="avatar header__avatar">
+    <% link_to '/', class: 'avatar__link' do %>
+      <%= image_tag 'avatar.png', class: 'avatar__image' %>
+    <% end %>
+  </div>
+  <div class="vcard header__vcard">
+    <div class="vcard__name">Анциферов Герман</div>
+    <div class="vcard__short-bio">
+      Привет, мир! Пишу о себе, программировании и о чем-то еще ...
+    </div>
   </div>
 </header>
