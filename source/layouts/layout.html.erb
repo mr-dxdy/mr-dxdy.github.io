@@ -13,8 +13,12 @@
     <%= partial "partials/header" %>
     <%= partial "partials/site_menu" %>
     <section class="blog">
-      <% blog.articles.each do |article| %>
-        <%= partial "partials/article", locals: { article: article } %>
+      <% if is_blog_article? %>
+        <%= partial "partials/article", locals: { article: current_article } %>
+      <% else %>
+        <% blog.articles.each do |article| %>
+          <%= partial "partials/article_summary", locals: { article: article } %>
+        <% end %>
       <% end %>
     </section>
   </body>
