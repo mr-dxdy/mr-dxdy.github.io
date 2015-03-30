@@ -6,8 +6,12 @@
 Time.zone = "Moscow"
 
 # locale
-activate :i18n, :langs => [:en]
+activate :i18n, langs: [:en]
 Russian.init_i18n
+
+# markdown
+set :markdown_engine, :redcarpet
+set :markdown, fenced_code_blocks: true, smartypants: true
 
 activate :blog do |blog|
   blog.prefix = "posts"

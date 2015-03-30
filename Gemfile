@@ -16,3 +16,9 @@ gem 'russian', '~> 0.6.0'
 
 # For feed.xml.builder
 gem "builder", "~> 3.0"
+
+# dom parser
+gem 'nokogiri'
+
+# markdown parser
+gem 'redcarpet'
