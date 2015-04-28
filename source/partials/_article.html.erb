@@ -6,6 +6,9 @@
     <%= article.title.capitalize %>
   </h1>
   <div class="article__text"><%= article.body %></div>
+  <div class="article__tags">
+    <%= partial "partials/tags", locals: { tags: article.tags } %>
+  </div>
 </article>
 <div class="comments">
   <%= partial "partials/disqus" %>

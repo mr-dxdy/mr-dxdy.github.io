@@ -1,0 +1,10 @@
+<% unless tags.empty? %>
+  <span class="tags__text">Опубликовано в</span>
+
+  <% tags.each do |tag| %>
+    <li class="tags__item">
+      <%= link_to tag, tag_path(tag), class: 'tags__link comma' %>
+    </li>
+  <% end %>
+
+<% end %>

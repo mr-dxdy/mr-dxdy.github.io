@@ -27,6 +27,8 @@ activate :blog do |blog|
   blog.default_extension = ".markdown"
 
   blog.tag_template = "tag.html"
+  blog.taglink = "categories/:tag.html"
+
   blog.calendar_template = "calendar.html"
 
   blog.paginate = true
@@ -35,6 +37,8 @@ activate :blog do |blog|
 end
 
 page "/feed.xml", layout: false
+page "/posts/categories/*", layout: "static"
+page "/blog/archive", proxy: "/static_pages/archive.html", layout: "static"
 
 ###
 # Compass

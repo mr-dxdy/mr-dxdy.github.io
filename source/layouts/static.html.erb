@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
-    <title>Анциферов Герман</title>
+    <title>Анциферов Герман<%= ' - ' + current_article.title unless current_article.nil? %></title>
 
     <%= stylesheet_link_tag    "application", media: "all" %>
     <%= javascript_include_tag "application" %>
@@ -13,13 +13,7 @@
     <%= partial "partials/header" %>
     <%= partial "partials/site_menu" %>
     <section class="blog">
-      <% if is_blog_article? %>
-        <%= partial "partials/article", locals: { article: current_article } %>
-      <% else %>
-        <% blog.articles.each do |article| %>
-          <%= partial "partials/article_summary", locals: { article: article } %>
-        <% end %>
-      <% end %>
+      <%= yield %>
     </section>
   </body>
 </html>
