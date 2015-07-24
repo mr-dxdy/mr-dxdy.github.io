@@ -1,15 +1,30 @@
-<article class="article blog__article">
-  <div class="meta article__meta">
-    <time class="meta__time"><%= I18n.l article.date, format: "%A, %-d %B %Y" %></time>
-  </div>
-  <h1 class="article__title">
-    <%= article.title.capitalize %>
-  </h1>
-  <div class="article__text"><%= article.body %></div>
-  <div class="article__tags">
-    <%= partial "partials/tags", locals: { tags: article.tags } %>
+<article class="article">
+  <h2 class="title article__title">
+    <a href="/"><span class="octicon octicon-home title__home"></span></a>
+    <span>&raquo;</span>
+    <span class="title__article"><%= article.title.capitalize %></span>
+  </h2>
+
+  <ul class="meta">
+    <li class="meta__item">
+      <span class="octicon octicon-calendar"></span>
+      <%= I18n.l article.date, format: "%B %d, %Y" %>
+    </li>
+    <% if article.tags.any? %>
+      <li class="meta__item">
+        <span class="octicon octicon-file-directory"></span>
+        <% article.tags.map do |tag| %>
+          <%= link_to tag, tag_path(tag), class: 'meta__link' %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+
+  <div class="article__body markdown-body">
+    <%= article.body %>
   </div>
 </article>
+
 <div class="comments">
   <%= partial "partials/disqus" %>
 </div>

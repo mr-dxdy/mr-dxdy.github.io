@@ -1,24 +1,27 @@
 source 'https://rubygems.org'
 
+source 'https://rails-assets.org' do
+  gem 'rails-assets-primer-css', '2.3.1'
+  gem 'rails-assets-primer-markdown', '2.1.7'
+  gem 'rails-assets-octicons', '2.4.1'
+end
+
 # ruby
 ruby '2.2.1'
 
 # core
-gem "middleman", "~> 3.3.10"
-gem "middleman-blog", "~> 3.5.3"
-gem 'middleman-minify-html', '>= 3.4.0'
+gem "middleman", "3.3.12"
+gem "middleman-blog", "3.5.3"
+gem 'middleman-minify-html', '3.4.1'
 
 # css
-gem 'sass'
-
-# locale
-gem 'russian', '~> 0.6.0'
+gem 'sass', '3.4.16'
 
 # For feed.xml.builder
 gem "builder", "~> 3.0"
 
 # dom parser
-gem 'nokogiri'
+gem 'nokogiri', '1.6'
 
 # markdown parser
-gem 'redcarpet'
+gem 'redcarpet', '3.3.2'

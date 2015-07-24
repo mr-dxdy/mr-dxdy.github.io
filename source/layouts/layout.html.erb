@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="ru">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
@@ -9,17 +9,26 @@
     <%= javascript_include_tag "application" %>
     <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
   </head>
-  <body class="page">
-    <%= partial "partials/header" %>
-    <%= partial "partials/site_menu" %>
-    <section class="blog">
-      <% if is_blog_article? %>
-        <%= partial "partials/article", locals: { article: current_article } %>
-      <% else %>
-        <% blog.articles.each do |article| %>
-          <%= partial "partials/article_summary", locals: { article: article } %>
-        <% end %>
-      <% end %>
-    </section>
+  <body>
+    <div class="wrapper">
+      <%= partial "partials/header" %>
+
+      <section class="blog container">
+        <div class="blog__aside">
+          <%= partial "partials/categories" %>
+        </div>
+        <div class="blog__content">
+          <% if is_blog_article? %>
+            <%= partial "partials/article", locals: { article: current_article } %>
+          <% else %>
+            <% blog.articles.each do |article| %>
+              <%= partial "partials/article_summary", locals: { article: article } %>
+            <% end %>
+          <% end %>
+        </div>
+      </section>
+    </div>
+
+    <%= partial "partials/footer" %>
   </body>
 </html>

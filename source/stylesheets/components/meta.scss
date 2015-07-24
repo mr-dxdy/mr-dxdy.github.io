@@ -1,0 +1,14 @@
+.meta {
+  list-style: none;
+  margin-bottom: 20px;
+  color: #999;
+
+  &__item {
+    display: inline;
+    padding-right: 20px;
+  }
+
+  &__link {
+    color: #999;
+  }
+}

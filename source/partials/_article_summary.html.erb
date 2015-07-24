@@ -1,12 +1,28 @@
-<article class="article blog__article">
-  <div class="meta article__meta">
-    <time class="meta__time"><%= I18n.l article.date, format: "%A, %-d %B %Y" %></time>
+<article class="article">
+  <h2 class="article__title">
+    <%= link_to article.title.capitalize, article %>
+  </h2>
+
+  <ul class="meta">
+    <li class="meta__item">
+      <span class="octicon octicon-calendar"></span>
+      <%= I18n.l article.date, format: "%B %d, %Y" %>
+    </li>
+    <% if article.tags.any? %>
+      <li class="meta__item">
+        <span class="octicon octicon-file-directory"></span>
+        <% article.tags.map do |tag| %>
+          <%= link_to tag, tag_path(tag), class: 'meta__link' %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+
+  <div class="article__body markdown-body">
+    <%= article.body %>
   </div>
-  <h1 class="article__title">
-    <%= link_to article.title.capitalize, article, class: 'article__title-link' %>
-  </h1>
-  <div class="article__text"><%= article.summary %></div>
+
   <div class="readmore article__readmore">
-    <%= link_to 'Подробнее &#8594;', article, class: 'readmore__link' %>
+    <%= link_to 'Читать дальше &#8594;', article, class: 'readmore__link' %>
   </div>
 </article>

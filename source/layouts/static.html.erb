@@ -1,19 +1,28 @@
 <!doctype html>
-<html>
+<html lang="ru">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
-    <title>Анциферов Герман<%= ' - ' + current_article.title unless current_article.nil? %></title>
+    <title>Анциферов Герман</title>
 
     <%= stylesheet_link_tag    "application", media: "all" %>
     <%= javascript_include_tag "application" %>
     <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
   </head>
-  <body class="page">
-    <%= partial "partials/header" %>
-    <%= partial "partials/site_menu" %>
-    <section class="blog">
-      <%= yield %>
-    </section>
+  <body>
+    <div class="wrapper">
+      <%= partial "partials/header" %>
+
+      <section class="blog container">
+        <div class="blog__aside">
+          <%= partial "partials/categories" %>
+        </div>
+        <div class="blog__content">
+          <%= yield %>
+        </div>
+      </section>
+
+      <%= partial "partials/footer" %>
+    </div>
   </body>
 </html>
