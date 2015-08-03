@@ -36,8 +36,14 @@ activate :blog do |blog|
 end
 
 page "/feed.xml", layout: false
-page "/posts/categories/*", layout: "static"
-page "/blog/archive", proxy: "/static_pages/archive.html", layout: "static"
+
+helpers do
+  def current_tagname(tagname = nil)
+    @current_tagname ||= begin
+      tagname ? tagname : 'Новости'
+    end
+  end
+end
 
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'

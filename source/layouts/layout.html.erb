@@ -10,6 +10,8 @@
     <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
   </head>
   <body>
+    <% current_tagname locals['tagname'] %>
+
     <div class="wrapper">
       <%= partial "partials/header" %>
 
@@ -21,7 +23,7 @@
           <% if is_blog_article? %>
             <%= partial "partials/article", locals: { article: current_article } %>
           <% else %>
-            <% blog.articles.each do |article| %>
+            <% page_articles.each do |article| %>
               <%= partial "partials/article_summary", locals: { article: article } %>
             <% end %>
           <% end %>

@@ -1,6 +1,8 @@
 <nav class="menu">
-  <a class="menu-item selected" href="#">Account</a>
-  <a class="menu-item" href="#">Profile</a>
-  <a class="menu-item" href="#">Emails</a>
-  <a class="menu-item" href="#">Notifications</a>
+  <% blog.tags.each do |tag, articles| %>
+    <% link_to tag_path(tag), class: ['menu-item', ('selected' if tag == current_tagname)].join(' ') do %>
+      <%= tag.capitalize %>
+      <span class="counter"><%= articles.count %></span>
+    <% end %>
+  <% end %>
 </nav>
