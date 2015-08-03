@@ -5,3 +5,18 @@ $octicons-font-path: '/fonts/octicons';
 @import "primer-markdown/components/markdown.scss";
 
 @import "components/*";
+
+html, body {
+  height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .blog__aside {
+    display: none;
+  }
+
+  .blog__content {
+    width: 100%;
+    padding: 0;
+  }
+}
