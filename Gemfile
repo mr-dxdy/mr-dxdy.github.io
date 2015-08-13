@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 
 source 'https://rails-assets.org' do
-  gem 'rails-assets-primer-css', '2.3.1'
-  gem 'rails-assets-primer-markdown', '2.1.7'
-  gem 'rails-assets-octicons', '2.4.1'
+  gem 'rails-assets-primer-css', '2.3.1', require: false
+  gem 'rails-assets-primer-markdown', '2.1.7', require: false
+  gem 'rails-assets-octicons', '2.4.1', require: false
 end
 
 # ruby
