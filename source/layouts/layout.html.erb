@@ -26,6 +26,10 @@
             <% page_articles.each do |article| %>
               <%= article_tag article, type: :summary %>
             <% end %>
+
+            <% content_tag :div, class: "blog__pagination" do %>
+              <%= partial "partials/pagination", locals: locals %>
+            <% end if paginate && num_pages > 1 %>
           <% end %>
         </div>
       </section>

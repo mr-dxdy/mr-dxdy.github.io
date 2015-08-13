@@ -1,0 +1,4 @@
+<div class="pagination clearfix">
+  <%= link_to '&larr; Более ранние заметки', prev_page, class: 'pagination__link left' if prev_page %>
+  <%= link_to 'Более поздние заметки &rarr;', next_page, class: 'pagination__link right' if next_page %>
+</div>
