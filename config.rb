@@ -43,6 +43,17 @@ helpers do
       tagname ? tagname : 'Новости'
     end
   end
+
+  # @param options {Hash}
+  # => type is :full or :summary
+  def article_tag(article, options = {})
+    locals = {
+      type: :full,
+      article: article
+    }.merge options
+
+    partial "partials/article", locals: locals
+  end
 end
 
 set :css_dir, 'stylesheets'

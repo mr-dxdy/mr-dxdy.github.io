@@ -21,10 +21,10 @@
         </div>
         <div class="blog__content">
           <% if is_blog_article? %>
-            <%= partial "partials/article", locals: { article: current_article } %>
+            <%= article_tag current_article %>
           <% else %>
             <% page_articles.each do |article| %>
-              <%= partial "partials/article_summary", locals: { article: article } %>
+              <%= article_tag article, type: :summary %>
             <% end %>
           <% end %>
         </div>
