@@ -2,15 +2,13 @@
 # Blog settings
 ###
 
-# time
+activate :i18n
+activate :syntax
+
 Time.zone = "Moscow"
 
-# markdown
 set :markdown_engine, :redcarpet
 set :markdown, fenced_code_blocks: true, smartypants: true
-
-# localization
-activate :i18n
 
 activate :blog do |blog|
   blog.prefix = "posts"
@@ -79,4 +77,10 @@ configure :build do
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
+end
+
+activate :deploy do |deploy|
+  deploy.method = :git
+  deploy.branch = "master"
+  deploy.clean = true
 end

@@ -14,6 +14,12 @@ gem "middleman", "3.3.12"
 gem "middleman-blog", "3.5.3"
 gem 'middleman-minify-html', '3.4.1'
 
+# syntax
+gem 'middleman-syntax', '1.2.1'
+
+# deploy
+gem 'middleman-deploy', '~> 1.0'
+
 # css
 gem 'sass', '3.4.16'
 
