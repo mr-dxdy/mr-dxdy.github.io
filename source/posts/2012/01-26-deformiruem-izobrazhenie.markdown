@@ -4,6 +4,7 @@ author:
   display_name: "Герман"
   email: easy-coding@yandex.ru
 tags:
+- Новости
 - Алгоритмы
 ---
 
