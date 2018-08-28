@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <title>Личный блог Анциферова Германа</title>
+
+    <link href="/stylesheets/application.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/stylesheets/highlighting.css" rel="stylesheet" type="text/css" />
+
+    <script src="/javascripts/application.js" type="text/javascript"></script>
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/posts/feed.xml" />
+  </head>
+  <body>
+
+    <div class="wrapper">
+      <header class="header">
+  <div class="container header__content">
+    <div class="user-photo header__user-photo">
+<a class="user-photo__link" href="/">        <img class="user-photo__image" src="/images/avatar.png" />
+</a>    </div>
+    <div class="user-vcard header__user-vcard">
+      <div class="user-vcard__name">Анциферов Герман</div>
+      <div class="user-vcard__short-bio">
+        Привет, мир! Пишу о себе, программировании и о чем-то еще ...
+      </div>
+    </div>
+  </div>
+</header>
+
+
+      <section class="blog container">
+        <div class="blog__aside">
+          <nav class="menu">
+<a class="menu-item selected" href="/posts/categories/Новости.html">      Новости
+      <span class="counter">15</span>
+</a><a class="menu-item " href="/posts/categories/linux.html">      Linux
+      <span class="counter">2</span>
+</a><a class="menu-item " href="/posts/categories/ruby.html">      Ruby
+      <span class="counter">1</span>
+</a><a class="menu-item " href="/posts/categories/Алгоритмы.html">      Алгоритмы
+      <span class="counter">5</span>
+</a><a class="menu-item " href="/posts/categories/cuda.html">      Cuda
+      <span class="counter">1</span>
+</a><a class="menu-item " href="/posts/categories/monit.html">      Monit
+      <span class="counter">1</span>
+</a></nav>
+
+        </div>
+        <div class="blog__content">
+            <article class="article">
+      <h2 class="title article__title">
+    <a href="/"><span class="octicon octicon-home title__home"></span></a>
+    <span>&raquo;</span>
+    <span class="title__article">Плавный переход в изображениях</span>
+  </h2>
+
+
+  <ul class="meta">
+  <li class="meta__item">
+    <span class="octicon octicon-calendar"></span>
+    March 27, 2012
+  </li>
+    <li class="meta__item">
+      <span class="octicon octicon-file-directory"></span>
+        <span class="comma"><a class="meta__link" href="/posts/categories/Новости.html">Новости</a></span>
+        <span class="comma"><a class="meta__link" href="/posts/categories/Алгоритмы.html">Алгоритмы</a></span>
+    </li>
+</ul>
+
+
+  <div class="article__body markdown-body">
+    <p>Наверно у всех изучение компьютера начиналось с операционной системы Windows и у всех в памяти надолго осела добрая система Windows xp, ее голубое оформление, много надоедливых диалоговых окон, на которые даже сперва и не поймешь как ответить: &ldquo;да&rdquo;, &ldquo;нет&rdquo;, &ldquo;подумаю&hellip;&rdquo;.</p>
+
+<p>Эх, одни лишь воспоминания&hellip; А теперь все внимание на картинку:</p>
+
+<p><img alt="Завершение работы" src="/posts/2012/03/27/plavnyj-perexod-v-izobrazheniyax/windows_out.jpeg" /></p>
+
+<p>Речь пойдет о эффекте &ldquo;Плавный переход из одного изображения в другое&rdquo;. Данный эффект применялся в Windows XP при завершении сеанса, когда ваша картинка на рабочем столе медленно переходит в черно-белое изображение. Таких примеров можно приводить достаточно много, например в видеоредакторе Windows Movie Maker.
+
+Все решение скрывается в одной формуле:</p>
+<pre class="highlight text">  R(t) = (1-t)*F + t*S
+</pre>
+<p>где t принадлежит [0,1], F - первый кадр, S - второй кадр, R - результирующая картинка, получаемая при плавном переходе из изображения F в S.</p>
+
+<p>Наверно многим известна эта формула, например ее используют при движении фигуры по линии.</p>
+
+  </div>
+
+  
+
+</article>
+
+<div class="comments article__comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES * * */
+      var disqus_shortname = 'german-antsiferov';
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+
+
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer">
+  <p>
+    <span class="copyright footer__copyright">
+      Copyright &copy; 2018 Анциферов Герман
+    </span>
+  </p>
+</footer>
+
+    <!-- Yandex.Metrika counter --><script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter32769165 = new Ya.Metrika({ id:32769165, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="https://mc.yandex.ru/watch/32769165" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+  </body>
+</html>

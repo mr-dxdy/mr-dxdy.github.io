@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <title>Личный блог Анциферова Германа</title>
+
+    <link href="/stylesheets/application.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/stylesheets/highlighting.css" rel="stylesheet" type="text/css" />
+
+    <script src="/javascripts/application.js" type="text/javascript"></script>
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/posts/feed.xml" />
+  </head>
+  <body>
+
+    <div class="wrapper">
+      <header class="header">
+  <div class="container header__content">
+    <div class="user-photo header__user-photo">
+<a class="user-photo__link" href="/">        <img class="user-photo__image" src="/images/avatar.png" />
+</a>    </div>
+    <div class="user-vcard header__user-vcard">
+      <div class="user-vcard__name">Анциферов Герман</div>
+      <div class="user-vcard__short-bio">
+        Привет, мир! Пишу о себе, программировании и о чем-то еще ...
+      </div>
+    </div>
+  </div>
+</header>
+
+
+      <section class="blog container">
+        <div class="blog__aside">
+          <nav class="menu">
+<a class="menu-item selected" href="/posts/categories/Новости.html">      Новости
+      <span class="counter">15</span>
+</a><a class="menu-item " href="/posts/categories/linux.html">      Linux
+      <span class="counter">2</span>
+</a><a class="menu-item " href="/posts/categories/ruby.html">      Ruby
+      <span class="counter">1</span>
+</a><a class="menu-item " href="/posts/categories/Алгоритмы.html">      Алгоритмы
+      <span class="counter">5</span>
+</a><a class="menu-item " href="/posts/categories/cuda.html">      Cuda
+      <span class="counter">1</span>
+</a><a class="menu-item " href="/posts/categories/monit.html">      Monit
+      <span class="counter">1</span>
+</a></nav>
+
+        </div>
+        <div class="blog__content">
+              <article class="article">
+    <h2 class="title article__title">
+  <a href="/posts/2012/03/20/risuem-komiksy-chast-2.html">Рисуем комиксы. Часть 2</a>
+</h2>
+
+
+  <ul class="meta">
+  <li class="meta__item">
+    <span class="octicon octicon-calendar"></span>
+    March 20, 2012
+  </li>
+    <li class="meta__item">
+      <span class="octicon octicon-file-directory"></span>
+        <span class="comma"><a class="meta__link" href="/posts/categories/Новости.html">Новости</a></span>
+        <span class="comma"><a class="meta__link" href="/posts/categories/Алгоритмы.html">Алгоритмы</a></span>
+    </li>
+</ul>
+
+
+  <div class="article__body markdown-body">
+    <p>&laquo;Если немножко заглянуть в будущее, то данный алгоритм переведу на CUDA&hellip;&raquo; - такими словами заканчивается моя статья &ldquo;Рисуем комиксы (часть 1)&rdquo;.</p>
+
+<p>Слово сдержал и выношу на общий суд алгоритм Cartoon filter с использованием технологии CUDA. За основу был взят проект bilateralFilter из примеров CUDA SDK. В проекте используется новая для меня технология - текстурная память, а так же для вывода картинки на экране используется графическая библиотека OpenGL c возможностью редактирования параметров фильтра в режиме реального времени.</p>
+
+<p>Эффективность алгоритма на GPU по сравнению с CPU можно увидеть невооруженным взглядом. Для примера на моем компьютере изображение размером 515х515 с радиусом 37 на CPU обрабатывается за 34 секунды, GPU с таким заданием справляется за миллисекунды.
+
+  </div>
+
+  <div class="readmore article__readmore">
+  <a class="btn btn-outline" href="/posts/2012/03/20/risuem-komiksy-chast-2.html">Читать дальше &rarr;</a>
+</div>
+
+
+</article>
+
+
+
+              <article class="article">
+    <h2 class="title article__title">
+  <a href="/posts/2012/03/13/vrashhaem-izobrazhenie.html">Вращаем изображение</a>
+</h2>
+
+
+  <ul class="meta">
+  <li class="meta__item">
+    <span class="octicon octicon-calendar"></span>
+    March 13, 2012
+  </li>
+    <li class="meta__item">
+      <span class="octicon octicon-file-directory"></span>
+        <span class="comma"><a class="meta__link" href="/posts/categories/Новости.html">Новости</a></span>
+        <span class="comma"><a class="meta__link" href="/posts/categories/Алгоритмы.html">Алгоритмы</a></span>
+    </li>
+</ul>
+
+
+  <div class="article__body markdown-body">
+    <p>Нашел у себя еще один проект на тему &ldquo;Обработка изображений&rdquo;. В принципе ничего нового, идея такая же как и при масштабировании изображения нам нужно найти прообраз функции. Но не будем забегать вперед и сначала огласим полностью задачу &ldquo;Вращение объекта&rdquo;:</p>
+
+<ul>
+<li>Загрузка цветного изображения.</li>
+<li>Выделение прямоугольного региона.</li>
+<li>Определяем произвольную точку поворота, ограничимся условием выбора точки внутри прямоугольника.</li>
+<li>Задать угол поворота.
+
+  </div>
+
+  <div class="readmore article__readmore">
+  <a class="btn btn-outline" href="/posts/2012/03/13/vrashhaem-izobrazhenie.html">Читать дальше &rarr;</a>
+</div>
+
+
+</article>
+
+
+
+              <article class="article">
+    <h2 class="title article__title">
+  <a href="/posts/2012/02/13/delaem-zhizn-proshhe.html">Делаем жизнь проще!</a>
+</h2>
+
+
+  <ul class="meta">
+  <li class="meta__item">
+    <span class="octicon octicon-calendar"></span>
+    February 13, 2012
+  </li>
+    <li class="meta__item">
+      <span class="octicon octicon-file-directory"></span>
+        <span class="comma"><a class="meta__link" href="/posts/categories/Новости.html">Новости</a></span>
+    </li>
+</ul>
+
+
+  <div class="article__body markdown-body">
+    <p>Прогресс не стоит на месте&hellip;</p>
+
+<p>Очень хочется, чтобы мой родной факультет тоже не стоял на месте и шел в ногу со временем. Все это знают и понимают, но боятся предложить свежие идеи. Поэтому я решил сделать первый шаг. На идею моего проекта можно взглянуть на фотографии или у деканата ПМиК.</p>
+
+<p><img alt="Быстрое расписание" src="/posts/2012/02/13/delaem-zhizn-proshhe/Idea_QR1.jpeg" />
+
+  </div>
+
+  <div class="readmore article__readmore">
+  <a class="btn btn-outline" href="/posts/2012/02/13/delaem-zhizn-proshhe.html">Читать дальше &rarr;</a>
+</div>
+
+
+</article>
+
+
+
+
+<div class="blog__pagination">              <div class="pagination clearfix">
+  <a class="pagination__link left" href="/posts/2012/page/2.html">&larr; Более ранние заметки</a>
+  <a class="pagination__link right" href="/posts/2012/page/4.html">Более поздние заметки &rarr;</a>
+</div>
+
+</div>        </div>
+      </section>
+    </div>
+
+    <footer class="footer">
+  <p>
+    <span class="copyright footer__copyright">
+      Copyright &copy; 2018 Анциферов Герман
+    </span>
+  </p>
+</footer>
+
+    <!-- Yandex.Metrika counter --><script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter32769165 = new Ya.Metrika({ id:32769165, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="https://mc.yandex.ru/watch/32769165" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+  </body>
+</html>
