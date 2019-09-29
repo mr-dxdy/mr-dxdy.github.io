@@ -4,6 +4,9 @@
 
 activate :i18n
 activate :syntax
+activate :sprockets do |c|
+  c.imported_asset_path = 'imported'
+end
 
 Time.zone = "Moscow"
 
@@ -12,28 +15,26 @@ set :markdown, fenced_code_blocks: true, smartypants: true
 
 activate :blog do |blog|
   blog.prefix = "posts"
-  blog.sources = ":year/:month-:day-:title.html"
-  blog.permalink = ":year/:month/:day/:title.html"
-  blog.taglink = "categories/:tag.html"
-  blog.layout = "layout.html"
+  blog.sources = "{year}/{month}-{day}-{title}.html"
+  blog.permalink = "{year}/{month}/{day}/{title}.html"
+  blog.taglink = "categories/{tag}.html"
+  blog.layout = "layout"
   blog.summary_separator = /(READMORE)/
   blog.summary_length = 250
-  blog.year_link = ":year.html"
-  blog.month_link = ":year/:month.html"
-  blog.day_link = ":year/:month/:day.html"
+  blog.year_link = "{year}.html"
+  blog.month_link = "{year}/{month}.html"
+  blog.day_link = "{year}/{month}/{day}.html"
   blog.default_extension = ".markdown"
 
   blog.tag_template = "tag.html"
-  blog.taglink = "categories/:tag.html"
+  blog.taglink = "categories/{tag}.html"
 
   blog.calendar_template = "calendar.html"
 
   blog.paginate = true
   blog.per_page = 3
-  blog.page_link = "page/:num"
+  blog.page_link = "page/{num}"
 end
-
-page "/feed.xml", layout: false
 
 helpers do
   def current_tagname(tagname = nil)
@@ -77,10 +78,4 @@ configure :build do
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
-end
-
-activate :deploy do |deploy|
-  deploy.method = :git
-  deploy.branch = "master"
-  deploy.clean = true
 end

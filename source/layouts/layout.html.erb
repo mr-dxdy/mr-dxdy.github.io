@@ -9,7 +9,6 @@
     <%= stylesheet_link_tag "highlighting" %>
 
     <%= javascript_include_tag "application" %>
-    <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
   </head>
   <body>
     <% current_tagname locals['tagname'] %>

@@ -7,27 +7,27 @@ source 'https://rails-assets.org' do
 end
 
 # ruby
-ruby '2.2.1'
+ruby '2.6.4'
 
 # core
-gem "middleman", "3.3.12"
-gem "middleman-blog", "3.5.3"
-gem 'middleman-minify-html', '3.4.1'
+gem "middleman", "4.3.5"
+gem "middleman-blog", "4.0.3"
+gem "middleman-sprockets", "4.1.1"
 
 # syntax
-gem 'middleman-syntax', '1.2.1'
-
-# deploy
-gem 'middleman-deploy', '~> 1.0'
+gem 'middleman-syntax', '3.0.0'
 
 # css
 gem 'sass', '3.4.16'
 
-# For feed.xml.builder
-gem "builder", "~> 3.0"
-
-# dom parser
-gem 'nokogiri', '1.6'
-
 # markdown parser
 gem 'redcarpet', '3.3.2'
+
+# time
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
+
+# html parser
+gem 'nokogiri'
+
+# windows dependencies
+gem 'wdm', '>= 0.1.0' if Gem.win_platform?
