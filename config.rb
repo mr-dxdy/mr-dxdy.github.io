@@ -55,6 +55,8 @@ helpers do
   end
 end
 
+page "/api/my-tv/playlist.enc", layout: false
+
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'
