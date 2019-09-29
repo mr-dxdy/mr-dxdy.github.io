@@ -5,11 +5,10 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
     <title>Личный блог Анциферова Германа</title>
 
-    <link href="/stylesheets/application.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="/stylesheets/highlighting.css" rel="stylesheet" type="text/css" />
+    <link href="/stylesheets/application.css" rel="stylesheet" media="all" />
+    <link href="/stylesheets/highlighting.css" rel="stylesheet" />
 
-    <script src="/javascripts/application.js" type="text/javascript"></script>
-    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/posts/feed.xml" />
+    <script src="/javascripts/application.js"></script>
   </head>
   <body>
 
@@ -17,7 +16,7 @@
       <header class="header">
   <div class="container header__content">
     <div class="user-photo header__user-photo">
-<a class="user-photo__link" href="/">        <img class="user-photo__image" src="/images/avatar.png" />
+<a href="/" class="user-photo__link">        <img src="/images/avatar.png" class="user-photo__image" alt="Avatar" />
 </a>    </div>
     <div class="user-vcard header__user-vcard">
       <div class="user-vcard__name">Анциферов Герман</div>
@@ -32,18 +31,18 @@
       <section class="blog container">
         <div class="blog__aside">
           <nav class="menu">
-<a class="menu-item selected" href="/posts/categories/Новости.html">      Новости
+<a href="/posts/categories/%D0%9D%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B8.html" class="menu-item selected">      Новости
       <span class="counter">15</span>
-</a><a class="menu-item " href="/posts/categories/linux.html">      Linux
+</a><a href="/posts/categories/monit.html" class="menu-item ">      Monit
+      <span class="counter">1</span>
+</a><a href="/posts/categories/ruby.html" class="menu-item ">      Ruby
+      <span class="counter">1</span>
+</a><a href="/posts/categories/linux.html" class="menu-item ">      Linux
       <span class="counter">2</span>
-</a><a class="menu-item " href="/posts/categories/ruby.html">      Ruby
+</a><a href="/posts/categories/cuda.html" class="menu-item ">      Cuda
       <span class="counter">1</span>
-</a><a class="menu-item " href="/posts/categories/Алгоритмы.html">      Алгоритмы
+</a><a href="/posts/categories/%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC%D1%8B.html" class="menu-item ">      Алгоритмы
       <span class="counter">5</span>
-</a><a class="menu-item " href="/posts/categories/cuda.html">      Cuda
-      <span class="counter">1</span>
-</a><a class="menu-item " href="/posts/categories/monit.html">      Monit
-      <span class="counter">1</span>
 </a></nav>
 
         </div>
@@ -63,9 +62,9 @@
   </li>
     <li class="meta__item">
       <span class="octicon octicon-file-directory"></span>
-        <span class="comma"><a class="meta__link" href="/posts/categories/Новости.html">Новости</a></span>
-        <span class="comma"><a class="meta__link" href="/posts/categories/cuda.html">CUDA</a></span>
-        <span class="comma"><a class="meta__link" href="/posts/categories/linux.html">Linux</a></span>
+        <span class="comma"><a href="/posts/categories/%D0%9D%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B8.html" class="meta__link">Новости</a></span>
+        <span class="comma"><a href="/posts/categories/cuda.html" class="meta__link">CUDA</a></span>
+        <span class="comma"><a href="/posts/categories/linux.html" class="meta__link">Linux</a></span>
     </li>
 </ul>
 
@@ -76,55 +75,55 @@
 <p>Для начала следует обновить дистрибутив OpenSuse до самых свежих и стабильных пакетов на текущей момент. Совет очень важный, так как порой при установке драйвера nvidia требуется пакет kernel-devel. Несовпадение пакета необходимый для драйвера nvidia с пакетом который установлен у вас в системе может повлечь к сбою в установке драйвера.</p>
 
 <p>По умолчанию в дистрибутиве OpenSuse стоит бесплатный видеодрайвер nouveau, который необходимо занести в черный список:</p>
-<pre class="highlight shell">  sudo <span class="nb">echo</span> -e <span class="s2">&quot;blacklist nouveau</span><span class="se">\\</span><span class="s2">noptions nouveau modeset=0&quot;</span> &gt;&gt; /etc/modprobe.d/50-blacklist.conf
-</pre>
+<div class="highlight"><pre class="highlight shell"><code>  <span class="nb">sudo echo</span> <span class="nt">-e</span> <span class="s2">"blacklist nouveau</span><span class="se">\\</span><span class="s2">noptions nouveau modeset=0"</span> <span class="o">&gt;&gt;</span> /etc/modprobe.d/50-blacklist.conf
+</code></pre></div>
 <p>Теперь нам необходимо узнать какая у нас видеокарта:</p>
 
 <p><code>bash /sbin/lspci | grep -i vga</code></p>
 
 <p>В итоге вы должны получить похожую строчку:</p>
-<pre class="highlight shell">  01:00.0 VGA compatible controller: nVidia Corporation GT216 <span class="o">[</span>GeForce GT 240M] <span class="o">(</span>rev a2<span class="o">)</span>
-</pre>
+<div class="highlight"><pre class="highlight shell"><code>  01:00.0 VGA compatible controller: nVidia Corporation GT216 <span class="o">[</span>GeForce GT 240M] <span class="o">(</span>rev a2<span class="o">)</span>
+</code></pre></div>
 <p></p>
 
 <p>Как видите я являюсь обладателем недорогой видеокарты GeForce GT240M. Теперь заходим на сайт <a href="http://www.nvidia.ru/Download/index.aspx?lang=ru">nvidia</a> и скачиваем драйвер под свою видеокарту.</p>
 
 <p>В итоге мы получим файл NVIDIA-Linux-<strong>-</strong>.**.run. Перед установкой нам необходимо установить необходимые пакеты (компилятор и пакет разработчика для ядра):</p>
-<pre class="highlight cpp"><span class="n">zypper</span> <span class="n">in</span> <span class="n">kernel</span><span class="o">-</span><span class="n">devel</span> <span class="n">gcc</span>
-</pre>
+<div class="highlight"><pre class="highlight cpp"><code><span class="n">zypper</span> <span class="n">in</span> <span class="n">kernel</span><span class="o">-</span><span class="n">devel</span> <span class="n">gcc</span>
+</code></pre></div>
 <p>Теперь нам необходимо остановить иксы:</p>
-<pre class="highlight cpp"><span class="n">sudo</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">init</span><span class="p">.</span><span class="n">d</span><span class="o">/</span><span class="n">xdm</span> <span class="n">stop</span>
-</pre>
+<div class="highlight"><pre class="highlight cpp"><code><span class="n">sudo</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">init</span><span class="p">.</span><span class="n">d</span><span class="o">/</span><span class="n">xdm</span> <span class="n">stop</span>
+</code></pre></div>
 <p>И начать установку драйвера:</p>
-<pre class="highlight cpp"><span class="n">sudo</span> <span class="n">chmod</span> <span class="o">+</span><span class="n">x</span> <span class="n">NVIDIA</span><span class="o">-</span><span class="n">Linux</span><span class="o">-**-**</span><span class="p">.</span><span class="o">**</span><span class="p">.</span><span class="n">run</span>
+<div class="highlight"><pre class="highlight cpp"><code><span class="n">sudo</span> <span class="n">chmod</span> <span class="o">+</span><span class="n">x</span> <span class="n">NVIDIA</span><span class="o">-</span><span class="n">Linux</span><span class="o">-**-**</span><span class="p">.</span><span class="o">**</span><span class="p">.</span><span class="n">run</span>
 <span class="n">sudo</span> <span class="p">.</span><span class="o">/</span><span class="n">NVIDIA</span><span class="o">-</span><span class="n">Linux</span><span class="o">-**-**</span><span class="p">.</span><span class="o">**</span><span class="p">.</span><span class="n">run</span>
-</pre>
+</code></pre></div>
 <p>Теперь можно перезагрузить систему и проверить, что драйвер установлен:</p>
-<pre class="highlight cpp"><span class="n">cat</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">X11</span><span class="o">/</span><span class="n">xorg</span><span class="p">.</span><span class="n">conf</span> <span class="o">|</span> <span class="n">grep</span> <span class="s">&quot;Driver&quot;</span>
-</pre>
+<div class="highlight"><pre class="highlight cpp"><code><span class="n">cat</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">X11</span><span class="o">/</span><span class="n">xorg</span><span class="p">.</span><span class="n">conf</span> <span class="o">|</span> <span class="n">grep</span> <span class="s">"Driver"</span>
+</code></pre></div>
 <p>Осталось установить CUDA. Для начала с сайта <a href="https://developer.nvidia.com/cuda-toolkit-archive">nvidia</a> скачиваем файл CUDA Toolkit, который содержит все необходимое для написания и запуска программ на CUDA. Вместе с CUDA Toolkit скачивают файл GPU Computing SDK code samples, который содержит кучу примеров для изучения технологии CUDA.</p>
 
 <p>Установку CUDA начнем с файла CUDA Toolkit:</p>
-<pre class="highlight cpp"><span class="n">sudo</span> <span class="n">chmod</span> <span class="o">+</span><span class="n">x</span> <span class="n">cudatoolkit_</span><span class="o">**</span><span class="p">.</span><span class="n">run</span>
+<div class="highlight"><pre class="highlight cpp"><code><span class="n">sudo</span> <span class="n">chmod</span> <span class="o">+</span><span class="n">x</span> <span class="n">cudatoolkit_</span><span class="o">**</span><span class="p">.</span><span class="n">run</span>
 <span class="n">sudo</span> <span class="p">.</span><span class="o">/</span><span class="n">cudatoolkit_</span><span class="o">**</span><span class="p">.</span><span class="n">run</span>
-</pre>
+</code></pre></div>
 <p>Программа предложит вам путь куда установить ПО для CUDA. Лучше оставить путь по умолчанию: <code>cpp /usr/local/</code>.</p>
 
 <p>Аналогично проделываем операцию по установке GPU Computing SDK code samples. Теперь можно написать первую программу&hellip; но наш компьютер не видит компилятор nvcc, поэтому добавим пути в переменное окружение (добавить строки в файл ~/.profile):</p>
-<pre class="highlight cpp"><span class="k">export</span> <span class="n">PATH</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">cuda</span><span class="o">/</span><span class="nl">bin:</span><span class="err">$</span><span class="n">PATH</span>
-<span class="k">export</span> <span class="n">LD_LIBRARY_PATH</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">cuda</span><span class="o">/</span><span class="nl">lib:</span><span class="err">$</span><span class="n">LD_LIBRARY_PATH</span>
-</pre>
+<div class="highlight"><pre class="highlight cpp"><code><span class="k">export</span> <span class="n">PATH</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">cuda</span><span class="o">/</span><span class="n">bin</span><span class="o">:</span><span class="err">$</span><span class="n">PATH</span>
+<span class="k">export</span> <span class="n">LD_LIBRARY_PATH</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">cuda</span><span class="o">/</span><span class="n">lib</span><span class="o">:</span><span class="err">$</span><span class="n">LD_LIBRARY_PATH</span>
+</code></pre></div>
 <p>Внимание! Если у вас 64 разрядная система, то указываем путь до папки lib64</p>
-<pre class="highlight cpp"><span class="k">export</span> <span class="n">LD_LIBRARY_PATH</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">cuda</span><span class="o">/</span><span class="nl">lib64:</span><span class="err">$</span><span class="n">LD_LIBRARY_PATH</span>
-</pre>
+<div class="highlight"><pre class="highlight cpp"><code><span class="k">export</span> <span class="n">LD_LIBRARY_PATH</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">cuda</span><span class="o">/</span><span class="n">lib64</span><span class="o">:</span><span class="err">$</span><span class="n">LD_LIBRARY_PATH</span>
+</code></pre></div>
 <p>Теперь можно написать первую программу, которую пишут на всех языках:</p>
-<pre class="highlight cpp"><span class="cp">#include &lt;stdio.h&gt;
+<div class="highlight"><pre class="highlight cpp"><code><span class="cp">#include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
 </span>
 <span class="n">__global__</span> <span class="kt">void</span> <span class="n">HelloCUDA</span><span class="p">(</span><span class="kt">char</span><span class="o">*</span> <span class="n">result</span><span class="p">,</span> <span class="kt">int</span> <span class="n">num</span><span class="p">){</span>
 
   <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-  <span class="kt">char</span> <span class="n">p_HelloCUDA</span><span class="p">[]</span> <span class="o">=</span> <span class="s">&quot;Hello CUDA!&quot;</span><span class="p">;</span>
+  <span class="kt">char</span> <span class="n">p_HelloCUDA</span><span class="p">[]</span> <span class="o">=</span> <span class="s">"Hello CUDA!"</span><span class="p">;</span>
   <span class="k">for</span><span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">num</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">result</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">p_HelloCUDA</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
   <span class="p">}</span>
@@ -144,21 +143,21 @@
   <span class="n">cudaMemcpy</span><span class="p">(</span><span class="n">host_result</span><span class="p">,</span> <span class="n">device_result</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">char</span><span class="p">)</span> <span class="o">*</span> <span class="mi">11</span><span class="p">,</span> <span class="n">cudaMemcpyDeviceToHost</span><span class="p">);</span>
 
   <span class="n">cudaFree</span><span class="p">(</span><span class="n">device_result</span><span class="p">);</span>
-  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">host_result</span><span class="p">);</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">"%s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">host_result</span><span class="p">);</span>
 
   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
-</pre>
+</code></pre></div>
 <p>Для компиляции и запуска программы необходимо:</p>
-<pre class="highlight cpp"><span class="n">nvcc</span> <span class="n">hello</span><span class="p">.</span><span class="n">cu</span> <span class="o">-</span><span class="n">o</span> <span class="n">hello</span><span class="p">.</span><span class="n">o</span>
+<div class="highlight"><pre class="highlight cpp"><code><span class="n">nvcc</span> <span class="n">hello</span><span class="p">.</span><span class="n">cu</span> <span class="o">-</span><span class="n">o</span> <span class="n">hello</span><span class="p">.</span><span class="n">o</span>
  <span class="p">.</span><span class="o">/</span><span class="n">hello</span><span class="p">.</span><span class="n">o</span>
-</pre>
+</code></pre></div>
 <p>Код достаточно грубый, ведь мы не обратываем ошибки при вызове функций CUDA. Для этого лучше посмотреть примеры из CUDA SDK, где через макросы обрабатываются исключения. Но для этого необходимо указывать компилятору путь до заголовочного файла cutil_inline.h из CUDA SDK.</p>
 
 <p>Для обучения добавлю еще пару примеров:</p>
 
 <p><strong>Сложение векторов</strong>:</p>
-<pre class="highlight cpp"><span class="cp">#include &lt;stdio.h&gt;
+<div class="highlight"><pre class="highlight cpp"><code><span class="cp">#include &lt;stdio.h&gt;
 #include &lt;cuda_runtime_api.h&gt;
 </span>
 <span class="n">__global__</span> <span class="kt">void</span> <span class="n">sum</span><span class="p">(</span><span class="kt">float</span><span class="o">*</span> <span class="n">A</span><span class="p">,</span> <span class="kt">float</span><span class="o">*</span> <span class="n">B</span><span class="p">,</span> <span class="kt">float</span><span class="o">*</span> <span class="n">C</span><span class="p">,</span> <span class="kt">int</span> <span class="n">N</span><span class="p">){</span>
@@ -177,7 +176,7 @@
 <span class="kt">int</span> <span class="n">main</span><span class="p">(){</span>
 
   <span class="kt">int</span> <span class="n">N</span> <span class="o">=</span> <span class="mi">500000</span><span class="p">;</span>
-  <span class="n">size_t</span> <span class="n">size</span> <span class="o">=</span> <span class="n">N</span> <span class="o">*</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">float</span><span class="p">);</span>
+  <span class="kt">size_t</span> <span class="n">size</span> <span class="o">=</span> <span class="n">N</span> <span class="o">*</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">float</span><span class="p">);</span>
 
   <span class="kt">float</span> <span class="o">*</span><span class="n">A</span><span class="p">,</span> <span class="o">*</span><span class="n">B</span><span class="p">,</span> <span class="o">*</span><span class="n">C</span><span class="p">;</span>
   <span class="n">A</span> <span class="o">=</span> <span class="p">(</span><span class="kt">float</span> <span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="n">size</span><span class="p">);</span>
@@ -205,7 +204,7 @@
   <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">N</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
     <span class="n">sum</span> <span class="o">+=</span> <span class="n">C</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
 
-  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Summa %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">sum</span><span class="p">);</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">"Summa %f</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">sum</span><span class="p">);</span>
 
   <span class="n">free</span><span class="p">(</span><span class="n">A</span><span class="p">);</span> <span class="n">free</span><span class="p">(</span><span class="n">B</span><span class="p">);</span> <span class="n">free</span><span class="p">(</span><span class="n">C</span><span class="p">);</span>
   <span class="n">cudaFree</span><span class="p">(</span><span class="n">cudaA</span><span class="p">);</span> <span class="n">cudaFree</span><span class="p">(</span><span class="n">cudaB</span><span class="p">);</span> <span class="n">cudaFree</span><span class="p">(</span><span class="n">cudaC</span><span class="p">);</span>
@@ -213,9 +212,9 @@
   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 
-</pre>
+</code></pre></div>
 <p><strong>Транспонирование матрицы</strong>:</p>
-<pre class="highlight cpp"><span class="cp">#include &lt;stdio.h&gt;
+<div class="highlight"><pre class="highlight cpp"><code><span class="cp">#include &lt;stdio.h&gt;
 #include &lt;cuda_runtime_api.h&gt;
 </span>
 <span class="n">__global__</span> <span class="kt">void</span> <span class="n">trans</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span> <span class="n">A</span><span class="p">,</span> <span class="kt">int</span><span class="o">*</span> <span class="n">B</span><span class="p">,</span> <span class="kt">int</span> <span class="n">N</span><span class="p">){</span>
@@ -240,11 +239,11 @@
 
   <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">size</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">){</span>
     <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">size</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span>
-      <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d &quot;</span><span class="p">,</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="n">size</span><span class="o">+</span><span class="n">j</span><span class="p">]);</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+      <span class="n">printf</span><span class="p">(</span><span class="s">"%d "</span><span class="p">,</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="n">size</span><span class="o">+</span><span class="n">j</span><span class="p">]);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
   <span class="p">}</span>
 
-  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="kt">int</span> <span class="n">main</span><span class="p">(){</span>
@@ -252,7 +251,7 @@
   <span class="kt">int</span> <span class="n">N</span> <span class="o">=</span> <span class="mi">16</span><span class="p">;</span>
   <span class="kt">int</span> <span class="n">block</span> <span class="o">=</span> <span class="mi">16</span><span class="p">;</span>
 
-  <span class="n">size_t</span> <span class="n">size</span> <span class="o">=</span> <span class="n">N</span><span class="o">*</span><span class="n">N</span> <span class="o">*</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">);</span>
+  <span class="kt">size_t</span> <span class="n">size</span> <span class="o">=</span> <span class="n">N</span><span class="o">*</span><span class="n">N</span> <span class="o">*</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">);</span>
 
   <span class="kt">int</span> <span class="o">*</span><span class="n">A</span><span class="p">,</span> <span class="o">*</span><span class="n">B</span><span class="p">;</span>
   <span class="n">A</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="n">size</span><span class="p">);</span>
@@ -281,7 +280,7 @@
 
   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
-</pre>
+</code></pre></div>
   </div>
 
   
@@ -312,7 +311,7 @@
     <footer class="footer">
   <p>
     <span class="copyright footer__copyright">
-      Copyright &copy; 2018 Анциферов Герман
+      Copyright &copy; 2019 Анциферов Герман
     </span>
   </p>
 </footer>

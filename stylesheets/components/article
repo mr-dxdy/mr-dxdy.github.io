@@ -1,0 +1,14 @@
+.article {
+  margin-bottom: 60px; }
+  .article__title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 32px; }
+  .article__body {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #444; }
+  .article__readmore {
+    margin-top: 30px; }
+  .article__comments {
+    margin: 10px 0px 50px 0px; }

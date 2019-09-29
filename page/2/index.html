@@ -5,11 +5,10 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
     <title>Личный блог Анциферова Германа</title>
 
-    <link href="/stylesheets/application.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="/stylesheets/highlighting.css" rel="stylesheet" type="text/css" />
+    <link href="/stylesheets/application.css" rel="stylesheet" media="all" />
+    <link href="/stylesheets/highlighting.css" rel="stylesheet" />
 
-    <script src="/javascripts/application.js" type="text/javascript"></script>
-    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/posts/feed.xml" />
+    <script src="/javascripts/application.js"></script>
   </head>
   <body>
 
@@ -17,7 +16,7 @@
       <header class="header">
   <div class="container header__content">
     <div class="user-photo header__user-photo">
-<a class="user-photo__link" href="/">        <img class="user-photo__image" src="/images/avatar.png" />
+<a href="/" class="user-photo__link">        <img src="/images/avatar.png" class="user-photo__image" alt="Avatar" />
 </a>    </div>
     <div class="user-vcard header__user-vcard">
       <div class="user-vcard__name">Анциферов Герман</div>
@@ -32,18 +31,18 @@
       <section class="blog container">
         <div class="blog__aside">
           <nav class="menu">
-<a class="menu-item selected" href="/posts/categories/Новости.html">      Новости
+<a href="/posts/categories/%D0%9D%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B8.html" class="menu-item selected">      Новости
       <span class="counter">15</span>
-</a><a class="menu-item " href="/posts/categories/linux.html">      Linux
+</a><a href="/posts/categories/monit.html" class="menu-item ">      Monit
+      <span class="counter">1</span>
+</a><a href="/posts/categories/ruby.html" class="menu-item ">      Ruby
+      <span class="counter">1</span>
+</a><a href="/posts/categories/linux.html" class="menu-item ">      Linux
       <span class="counter">2</span>
-</a><a class="menu-item " href="/posts/categories/ruby.html">      Ruby
+</a><a href="/posts/categories/cuda.html" class="menu-item ">      Cuda
       <span class="counter">1</span>
-</a><a class="menu-item " href="/posts/categories/Алгоритмы.html">      Алгоритмы
+</a><a href="/posts/categories/%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC%D1%8B.html" class="menu-item ">      Алгоритмы
       <span class="counter">5</span>
-</a><a class="menu-item " href="/posts/categories/cuda.html">      Cuda
-      <span class="counter">1</span>
-</a><a class="menu-item " href="/posts/categories/monit.html">      Monit
-      <span class="counter">1</span>
 </a></nav>
 
         </div>
@@ -61,9 +60,9 @@
   </li>
     <li class="meta__item">
       <span class="octicon octicon-file-directory"></span>
-        <span class="comma"><a class="meta__link" href="/posts/categories/Новости.html">Новости</a></span>
-        <span class="comma"><a class="meta__link" href="/posts/categories/cuda.html">CUDA</a></span>
-        <span class="comma"><a class="meta__link" href="/posts/categories/linux.html">Linux</a></span>
+        <span class="comma"><a href="/posts/categories/%D0%9D%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B8.html" class="meta__link">Новости</a></span>
+        <span class="comma"><a href="/posts/categories/cuda.html" class="meta__link">CUDA</a></span>
+        <span class="comma"><a href="/posts/categories/linux.html" class="meta__link">Linux</a></span>
     </li>
 </ul>
 
@@ -74,20 +73,20 @@
 <p>Для начала следует обновить дистрибутив OpenSuse до самых свежих и стабильных пакетов на текущей момент. Совет очень важный, так как порой при установке драйвера nvidia требуется пакет kernel-devel. Несовпадение пакета необходимый для драйвера nvidia с пакетом который установлен у вас в системе может повлечь к сбою в установке драйвера.</p>
 
 <p>По умолчанию в дистрибутиве OpenSuse стоит бесплатный видеодрайвер nouveau, который необходимо занести в черный список:</p>
-<pre class="highlight shell">  sudo <span class="nb">echo</span> -e <span class="s2">&quot;blacklist nouveau</span><span class="se">\\</span><span class="s2">noptions nouveau modeset=0&quot;</span> &gt;&gt; /etc/modprobe.d/50-blacklist.conf
-</pre>
+<div class="highlight"><pre class="highlight shell"><code>  <span class="nb">sudo echo</span> <span class="nt">-e</span> <span class="s2">"blacklist nouveau</span><span class="se">\\</span><span class="s2">noptions nouveau modeset=0"</span> <span class="o">&gt;&gt;</span> /etc/modprobe.d/50-blacklist.conf
+</code></pre></div>
 <p>Теперь нам необходимо узнать какая у нас видеокарта:</p>
 
 <p><code>bash /sbin/lspci | grep -i vga</code></p>
 
 <p>В итоге вы должны получить похожую строчку:</p>
-<pre class="highlight shell">  01:00.0 VGA compatible controller: nVidia Corporation GT216 <span class="o">[</span>GeForce GT 240M] <span class="o">(</span>rev a2<span class="o">)</span>
-</pre>
-<p>
+<div class="highlight"><pre class="highlight shell"><code>  01:00.0 VGA compatible controller: nVidia Corporation GT216 <span class="o">[</span>GeForce GT 240M] <span class="o">(</span>rev a2<span class="o">)</span>
+</code></pre></div>
+<p></p>
   </div>
 
   <div class="readmore article__readmore">
-  <a class="btn btn-outline" href="/posts/2012/12/16/ustanovka-cuda-pod-linux.html">Читать дальше &rarr;</a>
+  <a href="/posts/2012/12/16/ustanovka-cuda-pod-linux.html" class="btn btn-outline">Читать дальше &rarr;</a>
 </div>
 
 
@@ -108,24 +107,24 @@
   </li>
     <li class="meta__item">
       <span class="octicon octicon-file-directory"></span>
-        <span class="comma"><a class="meta__link" href="/posts/categories/Новости.html">Новости</a></span>
+        <span class="comma"><a href="/posts/categories/%D0%9D%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B8.html" class="meta__link">Новости</a></span>
     </li>
 </ul>
 
 
   <div class="article__body markdown-body">
-    <p>На календаре 4 августа, суббота, время отдыха и развлечений&hellip; Домой уехать не удалось, поэтому в планах оставалось посидеть у экрана телевизора и по болеть за сборную Россию. Ну никак не удается российским спортсменам увести золото с лондонской олимпиады :-( По новостям и радио бушуют разные мнения по этому поводу, но мы остановимся на том, что нам не хватает везения ;-)</p>
+    <p>На календаре 4 августа, суббота, время отдыха и развлечений… Домой уехать не удалось, поэтому в планах оставалось посидеть у экрана телевизора и по болеть за сборную Россию. Ну никак не удается российским спортсменам увести золото с лондонской олимпиады :-( По новостям и радио бушуют разные мнения по этому поводу, но мы остановимся на том, что нам не хватает везения ;-)</p>
 
-<p>Наступает реклама, но похоже я все свое терпение потратил пока болел за Россию&hellip; поэтому решил полистать каналы. Выбор большой, а смотреть нечего, но тут на глаза попадается эпизод из фильма &ldquo;Сестры&rdquo; - стрельба в тире&hellip;</p>
+<p>Наступает реклама, но похоже я все свое терпение потратил пока болел за Россию… поэтому решил полистать каналы. Выбор большой, а смотреть нечего, но тут на глаза попадается эпизод из фильма “Сестры” - стрельба в тире…</p>
 
-<p><img alt="Фильм" src="/posts/2012/08-05-pogovorim-o-filmax/shooting03.jpg" /></p>
+<p><img src="/posts/2012/08-05-pogovorim-o-filmax/shooting03.jpg" alt="Фильм"></p>
 
-<p>В этом эпизоде играет Сергей Бодров (младший). Сразу вспоминаешь картины &ldquo;Брат&rdquo;, &ldquo;Брат 2&rdquo;, песню группы Би-2 &ldquo;Полковнику никто не пишет&hellip;&rdquo;, цитаты из фильмов, которые стали народными: &ldquo;В чем сила брат&hellip;&rdquo;, &ldquo;Русские своих на войне не бросают&rdquo;, &ldquo;Я узнал, что у меня есть огромная семья&hellip;&rdquo; &hellip;
-
+<p>В этом эпизоде играет Сергей Бодров (младший). Сразу вспоминаешь картины “Брат”, “Брат 2”, песню группы Би-2 “Полковнику никто не пишет…”, цитаты из фильмов, которые стали народными: “В чем сила брат…”, “Русские своих на войне не бросают”, “Я узнал, что у меня есть огромная семья…” …
+</p>
   </div>
 
   <div class="readmore article__readmore">
-  <a class="btn btn-outline" href="/posts/2012/08/04/pogovorim-o-filmax.html">Читать дальше &rarr;</a>
+  <a href="/posts/2012/08/04/pogovorim-o-filmax.html" class="btn btn-outline">Читать дальше &rarr;</a>
 </div>
 
 
@@ -146,22 +145,22 @@
   </li>
     <li class="meta__item">
       <span class="octicon octicon-file-directory"></span>
-        <span class="comma"><a class="meta__link" href="/posts/categories/Новости.html">Новости</a></span>
+        <span class="comma"><a href="/posts/categories/%D0%9D%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B8.html" class="meta__link">Новости</a></span>
     </li>
 </ul>
 
 
   <div class="article__body markdown-body">
-    <p>Пока свежо в памяти, пока моя бурная фантазия не стала искажать факты и добавлять от &ldquo;себячину&rdquo;, пока я&hellip;, пока-пока&hellip; Ох, нет, пора начинать историю&hellip;</p>
+    <p>Пока свежо в памяти, пока моя бурная фантазия не стала искажать факты и добавлять от “себячину”, пока я…, пока-пока… Ох, нет, пора начинать историю…</p>
 
-<p>На календаре был конец апреля, зачетная неделя, 4 курс ПМиК, предмет &ldquo;Социальные и этические вопросы ИТ&rdquo;. Все студенты были выжаты как лимон, сил нет&hellip; преподаватель требует подготовить и публично защитить курсовую не позднее 29 апреля. Все студенты помотали головой, намотали на ус и добавили себе в &ldquo;TODO лист&rdquo; новую закладку на 29 апреля - ~скачать с интернета~ написать курсовую, распечатать и сдать.</p>
+<p>На календаре был конец апреля, зачетная неделя, 4 курс ПМиК, предмет “Социальные и этические вопросы ИТ”. Все студенты были выжаты как лимон, сил нет… преподаватель требует подготовить и публично защитить курсовую не позднее 29 апреля. Все студенты помотали головой, намотали на ус и добавили себе в “TODO лист” новую закладку на 29 апреля - ~скачать с интернета~ написать курсовую, распечатать и сдать.</p>
 
-<p>Шло время&hellip; Более ответственные студенты являлись на пары, стимулом были баллы за посещаемость. Отдельная им благодарность, ведь нужно иметь огромное терпение, чтобы отсидеть две пары этики в субботу&hellip; Как ни странно, но меня тоже можно частично отнести к этим студентам&hellip; Спросите как я продержался? Секрет очень прост - чтение электронных книг. Остальные же студенты были редкими гостями на празднике, изредка приходили посидеть на модулях&hellip;
-
+<p>Шло время… Более ответственные студенты являлись на пары, стимулом были баллы за посещаемость. Отдельная им благодарность, ведь нужно иметь огромное терпение, чтобы отсидеть две пары этики в субботу… Как ни странно, но меня тоже можно частично отнести к этим студентам… Спросите как я продержался? Секрет очень прост - чтение электронных книг. Остальные же студенты были редкими гостями на празднике, изредка приходили посидеть на модулях…
+</p>
   </div>
 
   <div class="readmore article__readmore">
-  <a class="btn btn-outline" href="/posts/2012/06/15/94-otlichno.html">Читать дальше &rarr;</a>
+  <a href="/posts/2012/06/15/94-otlichno.html" class="btn btn-outline">Читать дальше &rarr;</a>
 </div>
 
 
@@ -171,8 +170,8 @@
 
 
 <div class="blog__pagination">              <div class="pagination clearfix">
-  <a class="pagination__link left" href="/">&larr; Более ранние заметки</a>
-  <a class="pagination__link right" href="/page/3/">Более поздние заметки &rarr;</a>
+  <a href="/" class="pagination__link left">&larr; Более ранние заметки</a>
+  <a href="/page/3/" class="pagination__link right">Более поздние заметки &rarr;</a>
 </div>
 
 </div>        </div>
@@ -182,7 +181,7 @@
     <footer class="footer">
   <p>
     <span class="copyright footer__copyright">
-      Copyright &copy; 2018 Анциферов Герман
+      Copyright &copy; 2019 Анциферов Герман
     </span>
   </p>
 </footer>

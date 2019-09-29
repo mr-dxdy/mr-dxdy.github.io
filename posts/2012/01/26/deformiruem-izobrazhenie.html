@@ -5,11 +5,10 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
     <title>Личный блог Анциферова Германа</title>
 
-    <link href="/stylesheets/application.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="/stylesheets/highlighting.css" rel="stylesheet" type="text/css" />
+    <link href="/stylesheets/application.css" rel="stylesheet" media="all" />
+    <link href="/stylesheets/highlighting.css" rel="stylesheet" />
 
-    <script src="/javascripts/application.js" type="text/javascript"></script>
-    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/posts/feed.xml" />
+    <script src="/javascripts/application.js"></script>
   </head>
   <body>
 
@@ -17,7 +16,7 @@
       <header class="header">
   <div class="container header__content">
     <div class="user-photo header__user-photo">
-<a class="user-photo__link" href="/">        <img class="user-photo__image" src="/images/avatar.png" />
+<a href="/" class="user-photo__link">        <img src="/images/avatar.png" class="user-photo__image" alt="Avatar" />
 </a>    </div>
     <div class="user-vcard header__user-vcard">
       <div class="user-vcard__name">Анциферов Герман</div>
@@ -32,18 +31,18 @@
       <section class="blog container">
         <div class="blog__aside">
           <nav class="menu">
-<a class="menu-item selected" href="/posts/categories/Новости.html">      Новости
+<a href="/posts/categories/%D0%9D%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B8.html" class="menu-item selected">      Новости
       <span class="counter">15</span>
-</a><a class="menu-item " href="/posts/categories/linux.html">      Linux
+</a><a href="/posts/categories/monit.html" class="menu-item ">      Monit
+      <span class="counter">1</span>
+</a><a href="/posts/categories/ruby.html" class="menu-item ">      Ruby
+      <span class="counter">1</span>
+</a><a href="/posts/categories/linux.html" class="menu-item ">      Linux
       <span class="counter">2</span>
-</a><a class="menu-item " href="/posts/categories/ruby.html">      Ruby
+</a><a href="/posts/categories/cuda.html" class="menu-item ">      Cuda
       <span class="counter">1</span>
-</a><a class="menu-item " href="/posts/categories/Алгоритмы.html">      Алгоритмы
+</a><a href="/posts/categories/%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC%D1%8B.html" class="menu-item ">      Алгоритмы
       <span class="counter">5</span>
-</a><a class="menu-item " href="/posts/categories/cuda.html">      Cuda
-      <span class="counter">1</span>
-</a><a class="menu-item " href="/posts/categories/monit.html">      Monit
-      <span class="counter">1</span>
 </a></nav>
 
         </div>
@@ -63,8 +62,8 @@
   </li>
     <li class="meta__item">
       <span class="octicon octicon-file-directory"></span>
-        <span class="comma"><a class="meta__link" href="/posts/categories/Новости.html">Новости</a></span>
-        <span class="comma"><a class="meta__link" href="/posts/categories/Алгоритмы.html">Алгоритмы</a></span>
+        <span class="comma"><a href="/posts/categories/%D0%9D%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B8.html" class="meta__link">Новости</a></span>
+        <span class="comma"><a href="/posts/categories/%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC%D1%8B.html" class="meta__link">Алгоритмы</a></span>
     </li>
 </ul>
 
@@ -76,7 +75,7 @@
 <p>Рассмотрим еще одно преобразование изображений, которое можно отнести к классу геометрических процессов. Суть его заключается в том, что на изображение с мелким шагом наносится регулярная триангуляционная сетка. Затем построенная сетка треугольников деформируется неким образом так, что связи между узлами сохраняются.</p>
 </blockquote>
 
-<p><img alt="Сетка треугольников" src="/posts/2012/01/26/deformiruem-izobrazhenie/grid_warping.jpeg" />
+<p><img src="/posts/2012/01/26/deformiruem-izobrazhenie/grid_warping.jpeg" alt="Сетка треугольников" />
 </p>
 
 <blockquote>
@@ -86,7 +85,7 @@
 <p>Более подробно с лекциями по предмету Семенова А.Б. &ldquo;Обработка изображений&rdquo; можно познакомиться на сайте <a href="http://developers.sun.ru/content/view/232/121/">developers.sun.ru</a>.</p>
 
 <p><strong>Добавлю свои пять копеек:</strong> Идея такая же как и в масштабировании. У нас есть исходный треугольник и трансформированный. Да-да, нам нужно найти прообраз из результирующего треугольника в исходный. В нашем случаи рассмотрим все на примере</p>
-<pre class="highlight text">V1(x1,y1), V2(x2,y2), V3(x3,y3) - вершины треугольника.
+<div class="highlight"><pre class="highlight plaintext"><code>V1(x1,y1), V2(x2,y2), V3(x3,y3) - вершины треугольника.
 V0(x0,y0) - точка в треугольнике.
 T1(u1,v1), T2(u2,v2), T3(u3,v3) - текстурные координаты вершин треугольника.
 Нужно найти T0(u0,v0).
@@ -97,9 +96,9 @@ y1 + Uy2 - Uy1 + Vy3 - Vy1 = y0
 Решая эту систему уравнений находим U,V.
 Теперь  T0 = T1 + U(T2 - T1) + V(T3 - T1).
 Вот и все. Осталось теперь только закрасить точку V0(x0,y0) цветом T0
-</pre>
+</code></pre></div>
 <p>В задаче для сканирования треугольника, нам потребуется функция для проверки принадлежности точки треугольнику:</p>
-<pre class="highlight cpp"><span class="cm">/*
+<div class="highlight"><pre class="highlight cpp"><code><span class="cm">/*
   если одинакового знака то внутри,
   если хоть одно число равно 0 то точка лежит на грани,
   в остальных случаях лежит вне треугольника.
@@ -115,10 +114,10 @@ y1 + Uy2 - Uy1 + Vy3 - Vy1 = y0
    <span class="k">return</span> <span class="p">((</span><span class="n">N1</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">N2</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">N3</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">))</span> <span class="o">||</span> <span class="p">((</span><span class="n">N1</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">N2</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">N3</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">))</span>
             <span class="o">||</span> <span class="n">N1</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">N2</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">N3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
-</pre>
+</code></pre></div>
 <p>Для полной картины не хватает примера:</p>
 
-<p><img alt="Ворпинг картинки" src="/posts/2012/01/26/deformiruem-izobrazhenie/girl_warping.jpeg" /></p>
+<p><img src="/posts/2012/01/26/deformiruem-izobrazhenie/girl_warping.jpeg" alt="Ворпинг картинки" /></p>
 
   </div>
 
@@ -150,7 +149,7 @@ y1 + Uy2 - Uy1 + Vy3 - Vy1 = y0
     <footer class="footer">
   <p>
     <span class="copyright footer__copyright">
-      Copyright &copy; 2018 Анциферов Герман
+      Copyright &copy; 2019 Анциферов Герман
     </span>
   </p>
 </footer>
