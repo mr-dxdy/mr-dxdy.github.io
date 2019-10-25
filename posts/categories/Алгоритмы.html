@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <title>Личный блог Анциферова Германа</title>
+
+    <link href="/stylesheets/application.css" rel="stylesheet" media="all" />
+    <link href="/stylesheets/highlighting.css" rel="stylesheet" />
+
+    <script src="/javascripts/application.js"></script>
+  </head>
+  <body>
+
+    <div class="wrapper">
+      <header class="header">
+  <div class="container header__content">
+    <div class="user-photo header__user-photo">
+<a href="/" class="user-photo__link">        <img src="/images/avatar.png" class="user-photo__image" alt="Avatar" />
+</a>    </div>
+    <div class="user-vcard header__user-vcard">
+      <div class="user-vcard__name">Анциферов Герман</div>
+      <div class="user-vcard__short-bio">
+        Привет, мир! Пишу о себе, программировании и о чем-то еще ...
+      </div>
+    </div>
+  </div>
+</header>
+
+
+      <section class="blog container">
+        <div class="blog__aside">
+          <nav class="menu">
+<a href="/posts/categories/%D0%9D%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B8.html" class="menu-item ">      Новости
+      <span class="counter">15</span>
+</a><a href="/posts/categories/monit.html" class="menu-item ">      Monit
+      <span class="counter">1</span>
+</a><a href="/posts/categories/ruby.html" class="menu-item ">      Ruby
+      <span class="counter">1</span>
+</a><a href="/posts/categories/linux.html" class="menu-item ">      Linux
+      <span class="counter">2</span>
+</a><a href="/posts/categories/cuda.html" class="menu-item ">      Cuda
+      <span class="counter">1</span>
+</a><a href="/posts/categories/%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC%D1%8B.html" class="menu-item selected">      Алгоритмы
+      <span class="counter">5</span>
+</a></nav>
+
+        </div>
+        <div class="blog__content">
+              <article class="article">
+    <h2 class="title article__title">
+  <a href="/posts/2012/03/27/plavnyj-perexod-v-izobrazheniyax.html">Плавный переход в изображениях</a>
+</h2>
+
+
+  <ul class="meta">
+  <li class="meta__item">
+    <span class="octicon octicon-calendar"></span>
+    March 27, 2012
+  </li>
+    <li class="meta__item">
+      <span class="octicon octicon-file-directory"></span>
+        <span class="comma"><a href="/posts/categories/%D0%9D%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B8.html" class="meta__link">Новости</a></span>
+        <span class="comma"><a href="/posts/categories/%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC%D1%8B.html" class="meta__link">Алгоритмы</a></span>
+    </li>
+</ul>
+
+
+  <div class="article__body markdown-body">
+    <p>Наверно у всех изучение компьютера начиналось с операционной системы Windows и у всех в памяти надолго осела добрая система Windows xp, ее голубое оформление, много надоедливых диалоговых окон, на которые даже сперва и не поймешь как ответить: “да”, “нет”, “подумаю…”.</p>
+
+<p>Эх, одни лишь воспоминания… А теперь все внимание на картинку:</p>
+
+<p><img src="/posts/2012/03/27/plavnyj-perexod-v-izobrazheniyax/windows_out.jpeg" alt="Завершение работы"></p>
+
+<p>Речь пойдет о эффекте “Плавный переход из одного изображения в другое”. Данный эффект применялся в Windows XP при завершении сеанса, когда ваша картинка на рабочем столе медленно переходит в черно-белое изображение. Таких примеров можно приводить достаточно много, например в видеоредакторе Windows Movie Maker.
+</p>
+  </div>
+
+  <div class="readmore article__readmore">
+  <a href="/posts/2012/03/27/plavnyj-perexod-v-izobrazheniyax.html" class="btn btn-outline">Читать дальше &rarr;</a>
+</div>
+
+
+</article>
+
+
+
+              <article class="article">
+    <h2 class="title article__title">
+  <a href="/posts/2012/03/20/risuem-komiksy-chast-2.html">Рисуем комиксы. Часть 2</a>
+</h2>
+
+
+  <ul class="meta">
+  <li class="meta__item">
+    <span class="octicon octicon-calendar"></span>
+    March 20, 2012
+  </li>
+    <li class="meta__item">
+      <span class="octicon octicon-file-directory"></span>
+        <span class="comma"><a href="/posts/categories/%D0%9D%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B8.html" class="meta__link">Новости</a></span>
+        <span class="comma"><a href="/posts/categories/%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC%D1%8B.html" class="meta__link">Алгоритмы</a></span>
+    </li>
+</ul>
+
+
+  <div class="article__body markdown-body">
+    <p>«Если немножко заглянуть в будущее, то данный алгоритм переведу на CUDA…» - такими словами заканчивается моя статья “Рисуем комиксы (часть 1)”.</p>
+
+<p>Слово сдержал и выношу на общий суд алгоритм Cartoon filter с использованием технологии CUDA. За основу был взят проект bilateralFilter из примеров CUDA SDK. В проекте используется новая для меня технология - текстурная память, а так же для вывода картинки на экране используется графическая библиотека OpenGL c возможностью редактирования параметров фильтра в режиме реального времени.</p>
+
+<p>Эффективность алгоритма на GPU по сравнению с CPU можно увидеть невооруженным взглядом. Для примера на моем компьютере изображение размером 515х515 с радиусом 37 на CPU обрабатывается за 34 секунды, GPU с таким заданием справляется за миллисекунды.
+</p>
+  </div>
+
+  <div class="readmore article__readmore">
+  <a href="/posts/2012/03/20/risuem-komiksy-chast-2.html" class="btn btn-outline">Читать дальше &rarr;</a>
+</div>
+
+
+</article>
+
+
+
+              <article class="article">
+    <h2 class="title article__title">
+  <a href="/posts/2012/03/13/vrashhaem-izobrazhenie.html">Вращаем изображение</a>
+</h2>
+
+
+  <ul class="meta">
+  <li class="meta__item">
+    <span class="octicon octicon-calendar"></span>
+    March 13, 2012
+  </li>
+    <li class="meta__item">
+      <span class="octicon octicon-file-directory"></span>
+        <span class="comma"><a href="/posts/categories/%D0%9D%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B8.html" class="meta__link">Новости</a></span>
+        <span class="comma"><a href="/posts/categories/%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC%D1%8B.html" class="meta__link">Алгоритмы</a></span>
+    </li>
+</ul>
+
+
+  <div class="article__body markdown-body">
+    <p>Нашел у себя еще один проект на тему “Обработка изображений”. В принципе ничего нового, идея такая же как и при масштабировании изображения нам нужно найти прообраз функции. Но не будем забегать вперед и сначала огласим полностью задачу “Вращение объекта”:</p>
+
+<ul>
+<li>Загрузка цветного изображения.</li>
+<li>Выделение прямоугольного региона.</li>
+<li>Определяем произвольную точку поворота, ограничимся условием выбора точки внутри прямоугольника.</li>
+<li>Задать угол поворота.
+</li>
+</ul>
+  </div>
+
+  <div class="readmore article__readmore">
+  <a href="/posts/2012/03/13/vrashhaem-izobrazhenie.html" class="btn btn-outline">Читать дальше &rarr;</a>
+</div>
+
+
+</article>
+
+
+
+              <article class="article">
+    <h2 class="title article__title">
+  <a href="/posts/2012/01/26/deformiruem-izobrazhenie.html">Деформируем изображение</a>
+</h2>
+
+
+  <ul class="meta">
+  <li class="meta__item">
+    <span class="octicon octicon-calendar"></span>
+    January 26, 2012
+  </li>
+    <li class="meta__item">
+      <span class="octicon octicon-file-directory"></span>
+        <span class="comma"><a href="/posts/categories/%D0%9D%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B8.html" class="meta__link">Новости</a></span>
+        <span class="comma"><a href="/posts/categories/%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC%D1%8B.html" class="meta__link">Алгоритмы</a></span>
+    </li>
+</ul>
+
+
+  <div class="article__body markdown-body">
+    <p>Заканчивает серию программ по предмету “Обработка изображений” алгоритм “Деформация изображения”. Не охота лить воду, ведь тема и так серьезная, поэтому с вашего позволения процитирую небольшой текст из лекции:</p>
+
+<blockquote>
+<p>Рассмотрим еще одно преобразование изображений, которое можно отнести к классу геометрических процессов. Суть его заключается в том, что на изображение с мелким шагом наносится регулярная триангуляционная сетка. Затем построенная сетка треугольников деформируется неким образом так, что связи между узлами сохраняются.</p>
+</blockquote>
+
+<p><img src="/posts/2012/01/26/deformiruem-izobrazhenie/grid_warping.jpeg" alt="Сетка треугольников">
+</p>
+  </div>
+
+  <div class="readmore article__readmore">
+  <a href="/posts/2012/01/26/deformiruem-izobrazhenie.html" class="btn btn-outline">Читать дальше &rarr;</a>
+</div>
+
+
+</article>
+
+
+
+              <article class="article">
+    <h2 class="title article__title">
+  <a href="/posts/2012/01/08/risuem-komiksy.html">Рисуем комиксы</a>
+</h2>
+
+
+  <ul class="meta">
+  <li class="meta__item">
+    <span class="octicon octicon-calendar"></span>
+    January 08, 2012
+  </li>
+    <li class="meta__item">
+      <span class="octicon octicon-file-directory"></span>
+        <span class="comma"><a href="/posts/categories/%D0%9D%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B8.html" class="meta__link">Новости</a></span>
+        <span class="comma"><a href="/posts/categories/%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC%D1%8B.html" class="meta__link">Алгоритмы</a></span>
+    </li>
+</ul>
+
+
+  <div class="article__body markdown-body">
+    <p>Вот и пролетели новогодние праздники…</p>
+
+<p>Все встречают новый год по-разному…</p>
+
+<p>Но можно предположить, что алгоритм “Встречи нового года” у всех примерно такой: застолье, танцы, песни, поздравление близких и друзей…
+Вот и я хочу всех поздравить с Новым 2012 годом и процитировать очень запомнившиеся для меня поздравление от Афанасьевой Евгении:  “Успехов вам, проектов интересных, здоровья и любви! :-)</p>
+
+<p>Хочу предложить первый интересный для меня проект - это Cartoon Filter или как я его называю - мультяшный фильтр. Маленькая часть из моего диплома.
+</p>
+  </div>
+
+  <div class="readmore article__readmore">
+  <a href="/posts/2012/01/08/risuem-komiksy.html" class="btn btn-outline">Читать дальше &rarr;</a>
+</div>
+
+
+</article>
+
+
+
+
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer">
+  <p>
+    <span class="copyright footer__copyright">
+      Copyright &copy; 2019 Анциферов Герман
+    </span>
+  </p>
+</footer>
+
+    <!-- Yandex.Metrika counter --><script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter32769165 = new Ya.Metrika({ id:32769165, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="https://mc.yandex.ru/watch/32769165" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+  </body>
+</html>
