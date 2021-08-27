@@ -21,7 +21,7 @@ gem 'middleman-syntax', '3.0.0'
 gem 'sass', '3.4.16'
 
 # markdown parser
-gem 'redcarpet', '3.3.2'
+gem 'redcarpet', '3.5.1'
 
 # time
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
