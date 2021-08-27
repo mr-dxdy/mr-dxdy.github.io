@@ -134,7 +134,7 @@ DEPENDENCIES
   middleman-blog (= 4.0.3)
   middleman-sprockets (= 4.1.1)
   middleman-syntax (= 3.0.0)
-  nokogiri
+  nokogiri (>= 1.11.4)
   rails-assets-octicons (= 2.4.1)!
   rails-assets-primer-css (= 2.3.1)!
   rails-assets-primer-markdown (= 2.1.7)!

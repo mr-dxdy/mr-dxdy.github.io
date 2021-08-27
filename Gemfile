@@ -27,7 +27,7 @@ gem 'redcarpet', '3.5.1'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 
 # html parser
-gem 'nokogiri'
+gem "nokogiri", ">= 1.11.4"
 
 # windows dependencies
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
