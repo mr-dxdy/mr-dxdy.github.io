@@ -101,7 +101,7 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
-    redcarpet (3.3.2)
+    redcarpet (3.5.1)
     rouge (2.2.1)
     sass (3.4.16)
     sassc (2.2.1)
@@ -136,7 +136,7 @@ DEPENDENCIES
   rails-assets-octicons (= 2.4.1)!
   rails-assets-primer-css (= 2.3.1)!
   rails-assets-primer-markdown (= 2.1.7)!
-  redcarpet (= 3.3.2)
+  redcarpet (= 3.5.1)
   sass (= 3.4.16)
   tzinfo-data
 
