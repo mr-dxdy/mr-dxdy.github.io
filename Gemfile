@@ -7,7 +7,7 @@ source 'https://rails-assets.org' do
 end
 
 # ruby
-ruby '2.6.4'
+ruby '2.7.4'
 
 # core
 gem "middleman", "4.4.0"
