@@ -10,12 +10,12 @@ end
 ruby '2.6.4'
 
 # core
-gem "middleman", "4.3.5"
+gem "middleman", "4.4.0"
 gem "middleman-blog", "4.0.3"
 gem "middleman-sprockets", "4.1.1"
 
 # syntax
-gem 'middleman-syntax', '3.0.0'
+gem 'middleman-syntax', '3.2.0'
 
 # css
 gem 'sass', '3.4.16'
