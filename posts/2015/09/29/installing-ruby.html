@@ -16,7 +16,7 @@
       <header class="header">
   <div class="container header__content">
     <div class="user-photo header__user-photo">
-<a href="/" class="user-photo__link">        <img src="/images/avatar.png" class="user-photo__image" alt="Avatar" />
+<a href="/" class="user-photo__link">        <img src="/images/avatar.png" class="user-photo__image" alt="" />
 </a>    </div>
     <div class="user-vcard header__user-vcard">
       <div class="user-vcard__name">Анциферов Герман</div>
@@ -85,10 +85,10 @@ Source code of patch #41808:</p>
 <span class="o">+++</span> <span class="n">ext</span><span class="o">/</span><span class="n">openssl</span><span class="o">/</span><span class="n">ossl_pkey_ec</span><span class="p">.</span><span class="n">c</span>  <span class="p">(</span><span class="n">revision</span> <span class="mi">41808</span><span class="p">)</span>
 <span class="err">@@</span> <span class="o">-</span><span class="mi">757</span><span class="p">,</span><span class="mi">8</span> <span class="o">+</span><span class="mi">757</span><span class="p">,</span><span class="mi">10</span> <span class="err">@@</span>
                  <span class="n">method</span> <span class="o">=</span> <span class="n">EC_GFp_mont_method</span><span class="p">();</span>
-             <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">id</span> <span class="o">==</span> <span class="n">s_GFp_nist</span><span class="p">)</span> <span class="p">{</span>
+             <span class="err">}</span> <span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">id</span> <span class="o">==</span> <span class="n">s_GFp_nist</span><span class="p">)</span> <span class="p">{</span>
                  <span class="n">method</span> <span class="o">=</span> <span class="n">EC_GFp_nist_method</span><span class="p">();</span>
 <span class="o">+</span><span class="err">#</span><span class="k">if</span> <span class="o">!</span><span class="n">defined</span><span class="p">(</span><span class="n">OPENSSL_NO_EC2M</span><span class="p">)</span>
-             <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">id</span> <span class="o">==</span> <span class="n">s_GF2m_simple</span><span class="p">)</span> <span class="p">{</span>
+             <span class="p">}</span> <span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">id</span> <span class="o">==</span> <span class="n">s_GF2m_simple</span><span class="p">)</span> <span class="p">{</span>
                  <span class="n">method</span> <span class="o">=</span> <span class="n">EC_GF2m_simple_method</span><span class="p">();</span>
 <span class="o">+</span><span class="err">#</span><span class="n">endif</span>
              <span class="p">}</span>
@@ -107,16 +107,16 @@ Source code of patch #41808:</p>
              <span class="p">}</span>
 </code></pre></div>
 <p>Аналогичная ситуация возникает при установке ruby-1.8.7-p375:</p>
-<div class="highlight"><pre class="highlight shell"><code>curl <span class="nt">-fsSL</span> https://gist.github.com/thescouser89/8102408/raw/417cba9fee6ba1945b967b5ef236f676bd5005e0/1.8.7-rbenv.patch | rbenv install <span class="nt">--patch</span> 1.8.7-p375
+<div class="highlight"><pre class="highlight shell"><code>curl <span class="nt">-fsSL</span> https://gist.github.com/thescouser89/8102408/raw/417cba9fee6ba1945b967b5ef236f676bd5005e0/1.8.7-rbenv.patch | rbenv <span class="nb">install</span> <span class="nt">--patch</span> 1.8.7-p375
 
 </code></pre></div><div class="highlight"><pre class="highlight cpp"><code><span class="o">---</span> <span class="n">ext</span><span class="o">/</span><span class="n">openssl</span><span class="o">/</span><span class="n">ossl_pkey_ec</span><span class="p">.</span><span class="n">c</span>
 <span class="o">+++</span> <span class="n">ext</span><span class="o">/</span><span class="n">openssl</span><span class="o">/</span><span class="n">ossl_pkey_ec</span><span class="p">.</span><span class="n">c</span>
-<span class="err">@@</span> <span class="o">-</span><span class="mi">757</span><span class="p">,</span><span class="mi">8</span> <span class="o">+</span><span class="mi">757</span><span class="p">,</span><span class="mi">10</span> <span class="err">@@</span> <span class="k">static</span> <span class="n">VALUE</span> <span class="n">ossl_ec_group_initialize</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="n">VALUE</span> <span class="o">*</span><span class="n">argv</span><span class="p">,</span> <span class="n">VALUE</span> <span class="n">self</span><span class="p">)</span>
+<span class="err">@@</span> <span class="o">-</span><span class="mi">757</span><span class="p">,</span><span class="mi">8</span> <span class="o">+</span><span class="mi">757</span><span class="p">,</span><span class="mi">10</span> <span class="err">@@</span> <span class="k">static</span> <span class="n">VALUE</span> <span class="nf">ossl_ec_group_initialize</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="n">VALUE</span> <span class="o">*</span><span class="n">argv</span><span class="p">,</span> <span class="n">VALUE</span> <span class="n">self</span><span class="p">)</span>
                  <span class="n">method</span> <span class="o">=</span> <span class="n">EC_GFp_mont_method</span><span class="p">();</span>
-             <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">id</span> <span class="o">==</span> <span class="n">s_GFp_nist</span><span class="p">)</span> <span class="p">{</span>
+             <span class="err">}</span> <span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">id</span> <span class="o">==</span> <span class="n">s_GFp_nist</span><span class="p">)</span> <span class="p">{</span>
                  <span class="n">method</span> <span class="o">=</span> <span class="n">EC_GFp_nist_method</span><span class="p">();</span>
 <span class="o">+</span><span class="err">#</span><span class="k">if</span> <span class="o">!</span><span class="n">defined</span><span class="p">(</span><span class="n">OPENSSl_NO_EC2M</span><span class="p">)</span>
-             <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">id</span> <span class="o">==</span> <span class="n">s_GF2m_simple</span><span class="p">)</span> <span class="p">{</span>
+             <span class="p">}</span> <span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">id</span> <span class="o">==</span> <span class="n">s_GF2m_simple</span><span class="p">)</span> <span class="p">{</span>
                  <span class="n">method</span> <span class="o">=</span> <span class="n">EC_GF2m_simple_method</span><span class="p">();</span>
 <span class="o">+</span><span class="err">#</span><span class="n">endif</span>
              <span class="p">}</span>
@@ -145,7 +145,7 @@ Source code of patch #41808:</p>
 </code></pre></div>
 <p>The solutions:</p>
 <div class="highlight"><pre class="highlight shell"><code><span class="c"># zypper install libreadline5</span>
-curl <span class="nt">-fsSL</span> https://gist.github.com/LeonB/10503374/raw | rbenv install <span class="nt">--patch</span> 2.0.0-p451
+curl <span class="nt">-fsSL</span> https://gist.github.com/LeonB/10503374/raw | rbenv <span class="nb">install</span> <span class="nt">--patch</span> 2.0.0-p451
 </code></pre></div>
 <p>Source code of patch:</p>
 <div class="highlight"><pre class="highlight cpp"><code><span class="n">diff</span> <span class="o">--</span><span class="n">git</span> <span class="n">ext</span><span class="o">/</span><span class="n">readline</span><span class="o">/</span><span class="n">extconf</span><span class="p">.</span><span class="n">rb</span> <span class="n">ext</span><span class="o">/</span><span class="n">readline</span><span class="o">/</span><span class="n">extconf</span><span class="p">.</span><span class="n">rb</span>
@@ -210,7 +210,7 @@ curl <span class="nt">-fsSL</span> https://gist.github.com/LeonB/10503374/raw | 
 <span class="n">make</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">:</span> <span class="o">***</span> <span class="p">[</span><span class="n">readline</span><span class="p">.</span><span class="n">o</span><span class="p">]</span> <span class="err">Ошибка</span> <span class="mi">1</span>
 </code></pre></div>
 <h2>Решение</h2>
-<div class="highlight"><pre class="highlight shell"><code>curl <span class="nt">-fsSL</span> https://gist.github.com/LeonB/10503374/raw | rbenv install <span class="nt">--patch</span> 2.0.0-p451
+<div class="highlight"><pre class="highlight shell"><code>curl <span class="nt">-fsSL</span> https://gist.github.com/LeonB/10503374/raw | rbenv <span class="nb">install</span> <span class="nt">--patch</span> 2.0.0-p451
 </code></pre></div>
   </div>
 
@@ -242,7 +242,7 @@ curl <span class="nt">-fsSL</span> https://gist.github.com/LeonB/10503374/raw | 
     <footer class="footer">
   <p>
     <span class="copyright footer__copyright">
-      Copyright &copy; 2011 &mdash; 2021 Анциферов Герман
+      Copyright &copy; 2011 &mdash; 2022 Анциферов Герман
     </span>
   </p>
 </footer>

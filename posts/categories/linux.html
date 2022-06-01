@@ -16,7 +16,7 @@
       <header class="header">
   <div class="container header__content">
     <div class="user-photo header__user-photo">
-<a href="/" class="user-photo__link">        <img src="/images/avatar.png" class="user-photo__image" alt="Avatar" />
+<a href="/" class="user-photo__link">        <img src="/images/avatar.png" class="user-photo__image" alt="" />
 </a>    </div>
     <div class="user-vcard header__user-vcard">
       <div class="user-vcard__name">Анциферов Герман</div>
@@ -70,7 +70,7 @@
     <h2>Обновление дистрибутива</h2>
 
 <p>Пример обновления OpenSuse с версии 13.1 до 13.2:</p>
-<div class="highlight"><pre class="highlight shell"><code>sed <span class="nt">-i</span> <span class="s1">'s/13\.1/13\.2/g'</span> /etc/zypp/repos.d/<span class="k">*</span>
+<div class="highlight"><pre class="highlight shell"><code><span class="nb">sed</span> <span class="nt">-i</span> <span class="s1">'s/13\.1/13\.2/g'</span> /etc/zypp/repos.d/<span class="k">*</span>
 zypper clean <span class="nt">-a</span>
 zypper ref
 zypper dup
@@ -147,7 +147,7 @@ zypper dup
     <footer class="footer">
   <p>
     <span class="copyright footer__copyright">
-      Copyright &copy; 2011 &mdash; 2021 Анциферов Герман
+      Copyright &copy; 2011 &mdash; 2022 Анциферов Герман
     </span>
   </p>
 </footer>
