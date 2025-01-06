@@ -1,8 +1,0 @@
-<nav class="menu">
-  <% blog.tags.each do |tag, articles| %>
-    <% link_to tag_path(tag), class: ['menu-item', ('selected' if tag == current_tagname)].join(' ') do %>
-      <%= tag.capitalize %>
-      <span class="counter"><%= articles.count %></span>
-    <% end %>
-  <% end %>
-</nav>

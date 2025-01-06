@@ -1,5 +1,13 @@
-compile:
-	bundle exec middleman build --clean
+clean:
+	bundle exec jekyll clean
+
+js-compile:
+	npm run build
+
+ruby-compile:
+	JEKYLL_ENV=production bundle exec jekyll build -d ./build
+
+compile: clean js-compile ruby-compile
 
 setup-deploy:
 	git worktree add build master
@@ -12,4 +20,4 @@ deploy: compile
 	cd -
 
 dev-server:
-	bundle exec middleman server
+	npm run build && ./tools/run.sh
