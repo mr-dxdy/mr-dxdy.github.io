@@ -1,0 +1,221 @@
+<!doctype html><html lang="ru-RU" ><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f7f7"><meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1b1b1e"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="viewport" content="width=device-width, user-scalable=no initial-scale=1, shrink-to-fit=no, viewport-fit=cover" ><meta name="generator" content="Jekyll v4.3.4" /><meta property="og:title" content="Installing Ruby" /><meta property="og:locale" content="ru_RU" /><meta name="description" content="Patch 41808" /><meta property="og:description" content="Patch 41808" /><link rel="canonical" href="https://mr-dxdy.github.io/posts/installing_ruby.html/" /><meta property="og:url" content="https://mr-dxdy.github.io/posts/installing_ruby.html/" /><meta property="og:site_name" content="Анциферов Герман" /><meta property="og:type" content="article" /><meta property="article:published_time" content="2015-09-29T09:15:00+03:00" /><meta name="twitter:card" content="summary" /><meta property="twitter:title" content="Installing Ruby" /> <script type="application/ld+json"> {"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2015-09-29T09:15:00+03:00","datePublished":"2015-09-29T09:15:00+03:00","description":"Patch 41808","headline":"Installing Ruby","mainEntityOfPage":{"@type":"WebPage","@id":"https://mr-dxdy.github.io/posts/installing_ruby.html/"},"url":"https://mr-dxdy.github.io/posts/installing_ruby.html/"}</script><title>Installing Ruby | Анциферов Герман</title><link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicons/favicon-16x16.png"><link rel="manifest" href="/assets/img/favicons/site.webmanifest"><link rel="shortcut icon" href="/assets/img/favicons/favicon.ico"><meta name="apple-mobile-web-app-title" content="Анциферов Герман"><meta name="application-name" content="Анциферов Герман"><meta name="msapplication-TileColor" content="#da532c"><meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml"><meta name="theme-color" content="#ffffff"><link rel="preconnect" href="https://fonts.googleapis.com" ><link rel="dns-prefetch" href="https://fonts.googleapis.com" ><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="dns-prefetch" href="https://fonts.gstatic.com" ><link rel="preconnect" href="https://cdn.jsdelivr.net" ><link rel="dns-prefetch" href="https://cdn.jsdelivr.net" ><link rel="stylesheet" href="/assets/css/jekyll-theme-chirpy.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Source+Sans+Pro:wght@400;600;700;900&display=swap"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tocbot@4.32.2/dist/tocbot.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/css/glightbox.min.css"> <script src="/assets/js/dist/theme.min.js"></script> <script defer src="https://cdn.jsdelivr.net/combine/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js,npm/glightbox@3.3.0/dist/js/glightbox.min.js,npm/clipboard@2.0.11/dist/clipboard.min.js,npm/dayjs@1.11.13/dayjs.min.js,npm/dayjs@1.11.13/locale/ru.js,npm/dayjs@1.11.13/plugin/relativeTime.js,npm/dayjs@1.11.13/plugin/localizedFormat.js,npm/tocbot@4.32.2/dist/tocbot.min.js"></script> <script defer src="/assets/js/dist/post.min.js"></script> <script defer src="/app.min.js?baseurl=&register=true" ></script><body><aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-end"><header class="profile-wrapper"> <a href="/" id="avatar" class="rounded-circle"><img src="/assets/img/avatar.jpeg" width="112" height="112" alt="avatar" onerror="this.style.display='none'"></a> <a class="site-title d-block" href="/">Анциферов Герман</a><p class="site-subtitle fst-italic mb-0"></p></header><nav class="flex-column flex-grow-1 w-100 ps-0"><ul class="nav"><li class="nav-item"> <a href="/" class="nav-link"> <i class="fa-fw fas fa-home"></i> <span>ГЛАВНАЯ</span> </a><li class="nav-item"> <a href="/tags/" class="nav-link"> <i class="fa-fw fas fa-tags"></i> <span>ТЕГИ</span> </a><li class="nav-item"> <a href="/archives/" class="nav-link"> <i class="fa-fw fas fa-archive"></i> <span>АРХИВ</span> </a></ul></nav><div class="sidebar-bottom d-flex flex-wrap align-items-center w-100"> <button type="button" class="btn btn-link nav-link" aria-label="Switch Mode" id="mode-toggle"> <i class="fas fa-adjust"></i> </button> <span class="icon-border"></span> <a href="https://github.com/mr-dxdy" aria-label="github" target="_blank" rel="noopener noreferrer" > <i class="fab fa-github"></i> </a> <a href="javascript:location.href = 'mailto:' + ['dxdy','bk.ru'].join('@')" aria-label="email" > <i class="fas fa-envelope"></i> </a> <a href="/feed.xml" aria-label="rss" > <i class="fas fa-rss"></i> </a></div></aside><div id="main-wrapper" class="d-flex justify-content-center"><div class="container d-flex flex-column px-xxl-5"><header id="topbar-wrapper" aria-label="Top Bar"><div id="topbar" class="d-flex align-items-center justify-content-between px-lg-3 h-100" ><nav id="breadcrumb" aria-label="Breadcrumb"> <span> <a href="/">Главная</a> </span> <span>Installing Ruby</span></nav><button type="button" id="sidebar-trigger" class="btn btn-link"> <i class="fas fa-bars fa-fw"></i> </button><div id="topbar-title"> Пост</div><button type="button" id="search-trigger" class="btn btn-link"> <i class="fas fa-search fa-fw"></i> </button> <search id="search" class="align-items-center ms-3 ms-lg-0"> <i class="fas fa-search fa-fw"></i> <input class="form-control" id="search-input" type="search" aria-label="search" autocomplete="off" placeholder="Поиск..." > </search> <button type="button" class="btn btn-link text-decoration-none" id="search-cancel">Отмена</button></div></header><div class="row flex-grow-1"><main aria-label="Main Content" class="col-12 col-lg-11 col-xl-9 px-md-4"><article class="px-1" data-toc="true"><header><h1 data-toc-skip>Installing Ruby</h1><div class="post-meta text-muted"> <span> Опубликовано <time data-ts="1443507300" data-df="DD.MM.YYYY" data-bs-toggle="tooltip" data-bs-placement="bottom" > 29.09.2015 </time> </span><div class="d-flex justify-content-between"> <span> Автор <em> <a href="https://github.com/mr-dxdy">Анциферов Герман</a> </em> </span><div> <span class="readtime" data-bs-toggle="tooltip" data-bs-placement="bottom" title="543 слов" > <em>3 мин.</em> чтения</span></div></div></div></header><div id="toc-bar" class="d-flex align-items-center justify-content-between invisible"> <span class="label text-truncate">Installing Ruby</span> <button type="button" class="toc-trigger btn me-1"> <i class="fa-solid fa-list-ul fa-fw"></i> </button></div><button id="toc-solo-trigger" type="button" class="toc-trigger btn btn-outline-secondary btn-sm"> <span class="label ps-2 pe-1">Содержание</span> <i class="fa-solid fa-angle-right fa-fw"></i> </button> <dialog id="toc-popup" class="p-0"><div class="header d-flex flex-row align-items-center justify-content-between"><div class="label text-truncate py-2 ms-4">Installing Ruby</div><button id="toc-popup-close" type="button" class="btn mx-1 my-1 opacity-75"> <i class="fas fa-close"></i> </button></div><div id="toc-popup-content" class="px-4 py-3 pb-4"></div></dialog><div class="content"><h2 id="patch-41808"><span class="me-2">Patch 41808</span><a href="#patch-41808" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><p>При установке ruby-1.9.3 возникает ошибка:</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Скопировано!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>ec_group_new_curve_gf2m' undeclared (first use in this function)
+</pre></table></code></div></div><p>Проблема решается с помощью установки патча:</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Скопировано!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>curl -fsSL https://gist.githubusercontent.com/petems/8420477/raw/4b23330b5c3cb5616eb90908c98421e4873e6ca6/41808.diff | rbenv install --patch 1.9.3-p194
+</pre></table></code></div></div><p>Source code of patch #41808:</p><div class="language-cpp highlighter-rouge"><div class="code-header"> <span data-label-text="Cpp"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Скопировано!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+</pre><td class="rouge-code"><pre><span class="nl">Index:</span> <span class="n">ext</span><span class="o">/</span><span class="n">openssl</span><span class="o">/</span><span class="n">ossl_pkey_ec</span><span class="p">.</span><span class="n">c</span>
+<span class="o">===================================================================</span>
+<span class="o">---</span> <span class="n">ext</span><span class="o">/</span><span class="n">openssl</span><span class="o">/</span><span class="n">ossl_pkey_ec</span><span class="p">.</span><span class="n">c</span>  <span class="p">(</span><span class="n">revision</span> <span class="mi">41807</span><span class="p">)</span>
+<span class="o">+++</span> <span class="n">ext</span><span class="o">/</span><span class="n">openssl</span><span class="o">/</span><span class="n">ossl_pkey_ec</span><span class="p">.</span><span class="n">c</span>  <span class="p">(</span><span class="n">revision</span> <span class="mi">41808</span><span class="p">)</span>
+<span class="err">@@</span> <span class="o">-</span><span class="mi">757</span><span class="p">,</span><span class="mi">8</span> <span class="o">+</span><span class="mi">757</span><span class="p">,</span><span class="mi">10</span> <span class="err">@@</span>
+                 <span class="n">method</span> <span class="o">=</span> <span class="n">EC_GFp_mont_method</span><span class="p">();</span>
+             <span class="p">}</span> <span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">id</span> <span class="o">==</span> <span class="n">s_GFp_nist</span><span class="p">)</span> <span class="p">{</span>
+                 <span class="n">method</span> <span class="o">=</span> <span class="n">EC_GFp_nist_method</span><span class="p">();</span>
+<span class="o">+</span><span class="err">#</span><span class="k">if</span> <span class="o">!</span><span class="n">defined</span><span class="p">(</span><span class="n">OPENSSL_NO_EC2M</span><span class="p">)</span>
+             <span class="p">}</span> <span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">id</span> <span class="o">==</span> <span class="n">s_GF2m_simple</span><span class="p">)</span> <span class="p">{</span>
+                 <span class="n">method</span> <span class="o">=</span> <span class="n">EC_GF2m_simple_method</span><span class="p">();</span>
+<span class="o">+</span><span class="err">#</span><span class="n">endif</span>
+             <span class="p">}</span>
+
+             <span class="k">if</span> <span class="p">(</span><span class="n">method</span><span class="p">)</span> <span class="p">{</span>
+<span class="err">@@</span> <span class="o">-</span><span class="mi">811</span><span class="p">,</span><span class="mi">8</span> <span class="o">+</span><span class="mi">811</span><span class="p">,</span><span class="mi">10</span> <span class="err">@@</span>
+
+             <span class="k">if</span> <span class="p">(</span><span class="n">id</span> <span class="o">==</span> <span class="n">s_GFp</span><span class="p">)</span> <span class="p">{</span>
+                 <span class="n">new_curve</span> <span class="o">=</span> <span class="n">EC_GROUP_new_curve_GFp</span><span class="p">;</span>
+<span class="o">+</span><span class="err">#</span><span class="k">if</span> <span class="o">!</span><span class="n">defined</span><span class="p">(</span><span class="n">OPENSSL_NO_EC2M</span><span class="p">)</span>
+             <span class="p">}</span> <span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">id</span> <span class="o">==</span> <span class="n">s_GF2m</span><span class="p">)</span> <span class="p">{</span>
+                 <span class="n">new_curve</span> <span class="o">=</span> <span class="n">EC_GROUP_new_curve_GF2m</span><span class="p">;</span>
+<span class="o">+</span><span class="err">#</span><span class="n">endif</span>
+             <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                 <span class="n">rb_raise</span><span class="p">(</span><span class="n">rb_eArgError</span><span class="p">,</span> <span class="s">"unknown symbol, must be :GFp or :GF2m"</span><span class="p">);</span>
+             <span class="p">}</span>
+</pre></table></code></div></div><p>Аналогичная ситуация возникает при установке ruby-1.8.7-p375:</p><div class="language-bash highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Скопировано!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre>curl <span class="nt">-fsSL</span> https://gist.github.com/thescouser89/8102408/raw/417cba9fee6ba1945b967b5ef236f676bd5005e0/1.8.7-rbenv.patch | rbenv <span class="nb">install</span> <span class="nt">--patch</span> 1.8.7-p375
+
+</pre></table></code></div></div><div class="language-cpp highlighter-rouge"><div class="code-header"> <span data-label-text="Cpp"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Скопировано!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+</pre><td class="rouge-code"><pre><span class="o">---</span> <span class="n">ext</span><span class="o">/</span><span class="n">openssl</span><span class="o">/</span><span class="n">ossl_pkey_ec</span><span class="p">.</span><span class="n">c</span>
+<span class="o">+++</span> <span class="n">ext</span><span class="o">/</span><span class="n">openssl</span><span class="o">/</span><span class="n">ossl_pkey_ec</span><span class="p">.</span><span class="n">c</span>
+<span class="err">@@</span> <span class="o">-</span><span class="mi">757</span><span class="p">,</span><span class="mi">8</span> <span class="o">+</span><span class="mi">757</span><span class="p">,</span><span class="mi">10</span> <span class="err">@@</span> <span class="k">static</span> <span class="n">VALUE</span> <span class="nf">ossl_ec_group_initialize</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="n">VALUE</span> <span class="o">*</span><span class="n">argv</span><span class="p">,</span> <span class="n">VALUE</span> <span class="n">self</span><span class="p">)</span>
+                 <span class="n">method</span> <span class="o">=</span> <span class="n">EC_GFp_mont_method</span><span class="p">();</span>
+             <span class="p">}</span> <span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">id</span> <span class="o">==</span> <span class="n">s_GFp_nist</span><span class="p">)</span> <span class="p">{</span>
+                 <span class="n">method</span> <span class="o">=</span> <span class="n">EC_GFp_nist_method</span><span class="p">();</span>
+<span class="o">+</span><span class="err">#</span><span class="k">if</span> <span class="o">!</span><span class="n">defined</span><span class="p">(</span><span class="n">OPENSSl_NO_EC2M</span><span class="p">)</span>
+             <span class="p">}</span> <span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">id</span> <span class="o">==</span> <span class="n">s_GF2m_simple</span><span class="p">)</span> <span class="p">{</span>
+                 <span class="n">method</span> <span class="o">=</span> <span class="n">EC_GF2m_simple_method</span><span class="p">();</span>
+<span class="o">+</span><span class="err">#</span><span class="n">endif</span>
+             <span class="p">}</span>
+
+             <span class="k">if</span> <span class="p">(</span><span class="n">method</span><span class="p">)</span> <span class="p">{</span>
+<span class="err">@@</span> <span class="o">-</span><span class="mi">811</span><span class="p">,</span><span class="mi">8</span> <span class="o">+</span><span class="mi">813</span><span class="p">,</span><span class="mi">10</span> <span class="err">@@</span> <span class="k">static</span> <span class="n">VALUE</span> <span class="n">ossl_ec_group_initialize</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="n">VALUE</span> <span class="o">*</span><span class="n">argv</span><span class="p">,</span> <span class="n">VALUE</span> <span class="n">self</span><span class="p">)</span>
+
+             <span class="k">if</span> <span class="p">(</span><span class="n">id</span> <span class="o">==</span> <span class="n">s_GFp</span><span class="p">)</span> <span class="p">{</span>
+                 <span class="n">new_curve</span> <span class="o">=</span> <span class="n">EC_GROUP_new_curve_GFp</span><span class="p">;</span>
+<span class="o">+</span><span class="err">#</span><span class="k">if</span> <span class="o">!</span><span class="n">defined</span><span class="p">(</span><span class="n">OPENSSL_NO_EC2M</span><span class="p">)</span>
+             <span class="p">}</span> <span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">id</span> <span class="o">==</span> <span class="n">s_GF2m</span><span class="p">)</span> <span class="p">{</span>
+                 <span class="n">new_curve</span> <span class="o">=</span> <span class="n">EC_GROUP_new_curve_GF2m</span><span class="p">;</span>
+<span class="o">+</span><span class="err">#</span><span class="n">endif</span>
+             <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                 <span class="n">rb_raise</span><span class="p">(</span><span class="n">rb_eArgError</span><span class="p">,</span> <span class="s">"unknown symbol, must be :GFp or :GF2m"</span><span class="p">);</span>
+             <span class="p">}</span>
+</pre></table></code></div></div><h3 id="источник"><span class="me-2">Источник</span><a href="#источник" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3><p><a href="https://github.com/sstephenson/ruby-build/wiki#make-error-for-200-p247-and-lower-on-fedorared-hat">Ruby-build WIKI</a></p><h2 id="readline-loaderror"><span class="me-2">Readline (LoadError)</span><a href="#readline-loaderror" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><p>I was greeted with the following message:</p><div class="language-bash highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Скопировано!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>require: cannot load such file <span class="nt">--</span> readline <span class="o">(</span>LoadError<span class="o">)</span>
+</pre></table></code></div></div><p>The solutions:</p><div class="language-bash highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Скопировано!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre><span class="c"># zypper install libreadline5</span>
+curl <span class="nt">-fsSL</span> https://gist.github.com/LeonB/10503374/raw | rbenv <span class="nb">install</span> <span class="nt">--patch</span> 2.0.0-p451
+</pre></table></code></div></div><p>Source code of patch:</p><div class="language-cpp highlighter-rouge"><div class="code-header"> <span data-label-text="Cpp"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Скопировано!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+</pre><td class="rouge-code"><pre><span class="n">diff</span> <span class="o">--</span><span class="n">git</span> <span class="n">ext</span><span class="o">/</span><span class="n">readline</span><span class="o">/</span><span class="n">extconf</span><span class="p">.</span><span class="n">rb</span> <span class="n">ext</span><span class="o">/</span><span class="n">readline</span><span class="o">/</span><span class="n">extconf</span><span class="p">.</span><span class="n">rb</span>
+<span class="n">index</span> <span class="mf">4920137..8e81253</span> <span class="mi">100644</span>
+<span class="o">---</span> <span class="n">ext</span><span class="o">/</span><span class="n">readline</span><span class="o">/</span><span class="n">extconf</span><span class="p">.</span><span class="n">rb</span>
+<span class="o">+++</span> <span class="n">ext</span><span class="o">/</span><span class="n">readline</span><span class="o">/</span><span class="n">extconf</span><span class="p">.</span><span class="n">rb</span>
+<span class="err">@@</span> <span class="o">-</span><span class="mi">19</span><span class="p">,</span><span class="mi">6</span> <span class="o">+</span><span class="mi">19</span><span class="p">,</span><span class="mi">10</span> <span class="err">@@</span> <span class="n">def</span> <span class="n">readline</span><span class="p">.</span><span class="n">have_func</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+   <span class="k">return</span> <span class="n">super</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">headers</span><span class="p">)</span>
+ <span class="n">end</span>
+
+<span class="o">+</span><span class="n">def</span> <span class="n">readline</span><span class="p">.</span><span class="n">have_type</span><span class="p">(</span><span class="n">type</span><span class="p">)</span>
+<span class="o">+</span>  <span class="k">return</span> <span class="n">super</span><span class="p">(</span><span class="n">type</span><span class="p">,</span> <span class="n">headers</span><span class="p">)</span>
+<span class="o">+</span><span class="n">end</span>
+<span class="o">+</span>
+ <span class="n">dir_config</span><span class="p">(</span><span class="err">'</span><span class="n">curses</span><span class="err">'</span><span class="p">)</span>
+ <span class="n">dir_config</span><span class="p">(</span><span class="err">'</span><span class="n">ncurses</span><span class="err">'</span><span class="p">)</span>
+ <span class="n">dir_config</span><span class="p">(</span><span class="err">'</span><span class="n">termcap</span><span class="err">'</span><span class="p">)</span>
+<span class="err">@@</span> <span class="o">-</span><span class="mi">93</span><span class="p">,</span><span class="mi">4</span> <span class="o">+</span><span class="mi">97</span><span class="p">,</span><span class="mi">9</span> <span class="err">@@</span> <span class="n">readline</span><span class="p">.</span><span class="n">have_func</span><span class="p">(</span><span class="s">"remove_history"</span><span class="p">)</span>
+ <span class="n">readline</span><span class="p">.</span><span class="n">have_func</span><span class="p">(</span><span class="s">"clear_history"</span><span class="p">)</span>
+ <span class="n">readline</span><span class="p">.</span><span class="n">have_func</span><span class="p">(</span><span class="s">"rl_redisplay"</span><span class="p">)</span>
+ <span class="n">readline</span><span class="p">.</span><span class="n">have_func</span><span class="p">(</span><span class="s">"rl_insert_text"</span><span class="p">)</span>
+<span class="o">+</span>
+<span class="o">+</span><span class="n">unless</span> <span class="n">readline</span><span class="p">.</span><span class="n">have_type</span><span class="p">(</span><span class="s">"rl_hook_func_t"</span><span class="p">)</span>
+<span class="o">+</span>  <span class="err">$</span><span class="n">defs</span> <span class="o">&lt;&lt;</span> <span class="s">"-Drl_hook_func_t=Function"</span>
+<span class="o">+</span><span class="n">end</span>
+<span class="o">+</span>
+ <span class="n">create_makefile</span><span class="p">(</span><span class="s">"readline"</span><span class="p">)</span>
+<span class="n">diff</span> <span class="o">--</span><span class="n">git</span> <span class="n">ext</span><span class="o">/</span><span class="n">readline</span><span class="o">/</span><span class="n">readline</span><span class="p">.</span><span class="n">c</span> <span class="n">ext</span><span class="o">/</span><span class="n">readline</span><span class="o">/</span><span class="n">readline</span><span class="p">.</span><span class="n">c</span>
+<span class="n">index</span> <span class="mf">3e7</span><span class="n">feea</span><span class="p">.</span><span class="mf">.482</span><span class="n">bf80</span> <span class="mi">100644</span>
+<span class="o">---</span> <span class="n">ext</span><span class="o">/</span><span class="n">readline</span><span class="o">/</span><span class="n">readline</span><span class="p">.</span><span class="n">c</span>
+<span class="o">+++</span> <span class="n">ext</span><span class="o">/</span><span class="n">readline</span><span class="o">/</span><span class="n">readline</span><span class="p">.</span><span class="n">c</span>
+<span class="err">@@</span> <span class="o">-</span><span class="mi">1883</span><span class="p">,</span><span class="mi">7</span> <span class="o">+</span><span class="mi">1883</span><span class="p">,</span><span class="mi">7</span> <span class="err">@@</span> <span class="n">Init_readline</span><span class="p">()</span>
+
+     <span class="n">rl_attempted_completion_function</span> <span class="o">=</span> <span class="n">readline_attempted_completion_function</span><span class="p">;</span>
+ <span class="cp">#if defined(HAVE_RL_PRE_INPUT_HOOK)
+</span><span class="o">-</span>    <span class="n">rl_pre_input_hook</span> <span class="o">=</span> <span class="p">(</span><span class="n">Function</span> <span class="o">*</span><span class="p">)</span><span class="n">readline_pre_input_hook</span><span class="p">;</span>
+<span class="o">+</span>    <span class="n">rl_pre_input_hook</span> <span class="o">=</span> <span class="p">(</span><span class="n">rl_hook_func_t</span> <span class="o">*</span><span class="p">)</span><span class="n">readline_pre_input_hook</span><span class="p">;</span>
+ <span class="cp">#endif
+</span> <span class="cp">#ifdef HAVE_RL_CATCH_SIGNALS
+</span>     <span class="n">rl_catch_signals</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</pre></table></code></div></div><p>Source:</p><p><a href="http://www.markholmberg.com/articles/readline-error-when-building-ruby">Readline error when building ruby</a></p><h2 id="compiling-readlinec"><span class="me-2">Compiling readline.c</span><a href="#compiling-readlinec" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><p>Ошибка при установке ruby 2.0.0:</p><div class="language-cpp highlighter-rouge"><div class="code-header"> <span data-label-text="Cpp"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Скопировано!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre><td class="rouge-code"><pre><span class="n">compiling</span> <span class="n">readline</span><span class="p">.</span><span class="n">c</span>
+<span class="n">readline</span><span class="p">.</span><span class="n">c</span><span class="o">:</span> <span class="n">In</span> <span class="n">function</span> <span class="err">‘</span><span class="n">Init_readline</span><span class="err">’</span><span class="o">:</span>
+<span class="n">readline</span><span class="p">.</span><span class="n">c</span><span class="o">:</span><span class="mi">1886</span><span class="o">:</span><span class="mi">26</span><span class="o">:</span> <span class="n">error</span><span class="o">:</span> <span class="err">‘</span><span class="n">Function</span><span class="err">’</span> <span class="n">undeclared</span> <span class="p">(</span><span class="n">first</span> <span class="n">use</span> <span class="n">in</span> <span class="k">this</span> <span class="n">function</span><span class="p">)</span>
+<span class="n">rl_pre_input_hook</span> <span class="o">=</span> <span class="p">(</span><span class="n">Function</span> <span class="o">*</span><span class="p">)</span><span class="n">readline_pre_input_hook</span><span class="p">;</span>
+<span class="o">^</span>
+<span class="n">readline</span><span class="p">.</span><span class="n">c</span><span class="o">:</span><span class="mi">1886</span><span class="o">:</span><span class="mi">26</span><span class="o">:</span> <span class="n">note</span><span class="o">:</span> <span class="n">each</span> <span class="n">undeclared</span> <span class="n">identifier</span> <span class="n">is</span> <span class="n">reported</span> <span class="n">only</span> <span class="n">once</span> <span class="k">for</span> <span class="n">each</span> <span class="n">function</span> <span class="n">it</span> <span class="n">appears</span> <span class="n">in</span>
+<span class="n">readline</span><span class="p">.</span><span class="n">c</span><span class="o">:</span><span class="mi">1886</span><span class="o">:</span><span class="mi">36</span><span class="o">:</span> <span class="n">error</span><span class="o">:</span> <span class="n">expected</span> <span class="n">expression</span> <span class="n">before</span> <span class="err">‘</span><span class="p">)</span><span class="err">’</span> <span class="n">token</span>
+<span class="n">rl_pre_input_hook</span> <span class="o">=</span> <span class="p">(</span><span class="n">Function</span> <span class="o">*</span><span class="p">)</span><span class="n">readline_pre_input_hook</span><span class="p">;</span>
+<span class="o">^</span>
+<span class="n">readline</span><span class="p">.</span><span class="n">c</span><span class="o">:</span> <span class="n">At</span> <span class="n">top</span> <span class="n">level</span><span class="o">:</span>
+<span class="n">readline</span><span class="p">.</span><span class="n">c</span><span class="o">:</span><span class="mi">530</span><span class="o">:</span><span class="mi">1</span><span class="o">:</span> <span class="n">warning</span><span class="o">:</span> <span class="err">‘</span><span class="n">readline_pre_input_hook</span><span class="err">’</span> <span class="n">defined</span> <span class="n">but</span> <span class="n">not</span> <span class="n">used</span> <span class="p">[</span><span class="o">-</span><span class="n">Wunused</span><span class="o">-</span><span class="n">function</span><span class="p">]</span>
+<span class="n">readline_pre_input_hook</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="o">^</span>
+<span class="n">make</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">:</span> <span class="o">***</span> <span class="p">[</span><span class="n">readline</span><span class="p">.</span><span class="n">o</span><span class="p">]</span> <span class="err">Ошибка</span> <span class="mi">1</span>
+</pre></table></code></div></div><h2 id="решение"><span class="me-2">Решение</span><a href="#решение" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><div class="language-bash highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Скопировано!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>curl <span class="nt">-fsSL</span> https://gist.github.com/LeonB/10503374/raw | rbenv <span class="nb">install</span> <span class="nt">--patch</span> 2.0.0-p451
+</pre></table></code></div></div></div><div class="post-tail-wrapper text-muted"><div class="post-tags"> <i class="fa fa-tags fa-fw me-1"></i> <a href="/tags/%D0%BD%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B8/" class="post-tag no-text-decoration" >Новости</a> <a href="/tags/ruby/" class="post-tag no-text-decoration" >Ruby</a></div><div class=" post-tail-bottom d-flex justify-content-between align-items-center mt-5 pb-2 " ><div class="license-wrapper"> Авторский пост защищен лицензией <a href="https://creativecommons.org/licenses/by/4.0/"> CC BY 4.0 </a> .</div><div class="share-wrapper d-flex align-items-center"> <span class="share-label text-muted">Поделиться</span> <span class="share-icons"> <a href="https://t.me/share/url?url=https%3A%2F%2Fmr-dxdy.github.io%2Fposts%2Finstalling_ruby.html%2F&text=Installing%20Ruby%20-%20%D0%90%D0%BD%D1%86%D0%B8%D1%84%D0%B5%D1%80%D0%BE%D0%B2%20%D0%93%D0%B5%D1%80%D0%BC%D0%B0%D0%BD" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram"> <i class="fa-fw fab fa-telegram"></i> </a> <script defer type="module" src="https://cdn.jsdelivr.net/npm/@justinribeiro/share-to-mastodon/+esm"></script> <button class="btn text-start" data-bs-toggle="tooltip" data-bs-placement="top" title="Mastodon" aria-label="Mastodon"> <share-to-mastodon class="share-mastodon" message="Installing%20Ruby%20-%20%D0%90%D0%BD%D1%86%D0%B8%D1%84%D0%B5%D1%80%D0%BE%D0%B2%20%D0%93%D0%B5%D1%80%D0%BC%D0%B0%D0%BD" url="https%3A%2F%2Fmr-dxdy.github.io%2Fposts%2Finstalling_ruby.html%2F"customInstanceList="[{&quot;label&quot;:&quot;mastodon.social&quot;,&quot;link&quot;:&quot;https://mastodon.social/&quot;}]" > <i class="fa-fw fa-brands fa-mastodon"></i> </share-to-mastodon> </button> <button id="copy-link" aria-label="Copy link" class="btn small" data-bs-toggle="tooltip" data-bs-placement="top" title="Скопировать ссылку" data-title-succeed="Ссылка успешно скопирована!" > <i class="fa-fw fas fa-link pe-none fs-6"></i> </button> </span></div></div></div></article></main><aside aria-label="Panel" id="panel-wrapper" class="col-xl-3 ps-2 text-muted"><div class="access"><section id="access-lastmod"><h2 class="panel-heading">Недавно обновлено</h2><ul class="content list-unstyled ps-0 pb-1 ms-1 mt-2"><li class="text-truncate lh-lg"> <a href="/posts/setup_monit.html/">Настройка monit</a><li class="text-truncate lh-lg"> <a href="/posts/installing_ruby.html/">Installing Ruby</a><li class="text-truncate lh-lg"> <a href="/posts/opensuse-cheat-sheet.html/">Шпаргалка по OpenSUSE</a><li class="text-truncate lh-lg"> <a href="/posts/ustanovka-cuda-pod-linux.html/">Установка CUDA под Linux</a><li class="text-truncate lh-lg"> <a href="/posts/94-otlichno.html/">94 ... отлично!</a></ul></section><section><h2 class="panel-heading">Популярные теги</h2><div class="d-flex flex-wrap mt-3 mb-1 me-3"> <a class="post-tag btn btn-outline-primary" href="/tags/%D0%BD%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B8/">Новости</a> <a class="post-tag btn btn-outline-primary" href="/tags/%D0%B0%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC%D1%8B/">Алгоритмы</a> <a class="post-tag btn btn-outline-primary" href="/tags/linux/">Linux</a> <a class="post-tag btn btn-outline-primary" href="/tags/cuda/">CUDA</a> <a class="post-tag btn btn-outline-primary" href="/tags/monit/">Monit</a> <a class="post-tag btn btn-outline-primary" href="/tags/ruby/">Ruby</a></div></section></div><div class="toc-border-cover z-3"></div><section id="toc-wrapper" class="invisible position-sticky ps-0 pe-4 pb-4"><h2 class="panel-heading ps-3 pb-2 mb-0">Содержание</h2><nav id="toc"></nav></section></aside></div><div class="row"><div id="tail-wrapper" class="col-12 col-lg-11 col-xl-9 px-md-4"><aside id="related-posts" aria-labelledby="related-label"><h3 class="mb-4" id="related-label">Похожие посты</h3><nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4"><article class="col"> <a href="/posts/94-otlichno.html/" class="post-preview card h-100"><div class="card-body"> <time data-ts="1339704000" data-df="DD.MM.YYYY" > 15.06.2012 </time><h4 class="pt-0 my-2">94 ... отлично!</h4><div class="text-muted"><p>Пока свежо в памяти, пока моя бурная фантазия не стала искажать факты и добавлять от “себячину”, пока я…, пока-пока… Ох, нет, пора начинать историю… На календаре был конец апреля, зачетная неделя,...</p></div></div></a></article><article class="col"> <a href="/posts/mission-completed.html/" class="post-preview card h-100"><div class="card-body"> <time data-ts="1335643200" data-df="DD.MM.YYYY" > 29.04.2012 </time><h4 class="pt-0 my-2">Mission completed</h4><div class="text-muted"><p>Название миссии: “Окончание бакалавриата”. Время окончания миссии: 28 апреля 2012г. Сложность: до сих пор не могу оценить сложность. С чем это связано? Может не хватало везения, усидчивости или в...</p></div></div></a></article><article class="col"> <a href="/posts/zhizn-studenta-glazami-lektora.html/" class="post-preview card h-100"><div class="card-body"> <time data-ts="1333137600" data-df="DD.MM.YYYY" > 31.03.2012 </time><h4 class="pt-0 my-2">Жизнь студента глазами лектора</h4><div class="text-muted"><p>Жизнь студента… Решил поднять эту тему для обсуждения. Может быть тема уж сильно надоела всем, но в основном каждый студент поднимает этот вопрос когда ищет правду или успокоения после совершения ...</p></div></div></a></article></nav></aside><nav class="post-navigation d-flex justify-content-between" aria-label="Post Navigation"> <a href="/posts/opensuse-cheat-sheet.html/" class="btn btn-outline-primary" aria-label="Предыдущий пост" ><p>Шпаргалка по OpenSUSE</p></a> <a href="/posts/setup_monit.html/" class="btn btn-outline-primary" aria-label="Следующий пост" ><p>Настройка monit</p></a></nav><footer aria-label="Site Info" class=" d-flex flex-column justify-content-center text-muted flex-lg-row justify-content-lg-between align-items-lg-center pb-lg-3 " ><p>© <time>2011 — 2025</time> <a href="https://github.com/mr-dxdy">Анциферов Герман</a></p><p>Использует тему <a data-bs-toggle="tooltip" data-bs-placement="top" title="v7.2.4" href="https://github.com/cotes2020/jekyll-theme-chirpy" target="_blank" rel="noopener" >Chirpy</a> для <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a></p></footer></div></div><div id="search-result-wrapper" class="d-flex justify-content-center d-none"><div class="col-11 content"><div id="search-hints"><section><h2 class="panel-heading">Популярные теги</h2><div class="d-flex flex-wrap mt-3 mb-1 me-3"> <a class="post-tag btn btn-outline-primary" href="/tags/%D0%BD%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B8/">Новости</a> <a class="post-tag btn btn-outline-primary" href="/tags/%D0%B0%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC%D1%8B/">Алгоритмы</a> <a class="post-tag btn btn-outline-primary" href="/tags/linux/">Linux</a> <a class="post-tag btn btn-outline-primary" href="/tags/cuda/">CUDA</a> <a class="post-tag btn btn-outline-primary" href="/tags/monit/">Monit</a> <a class="post-tag btn btn-outline-primary" href="/tags/ruby/">Ruby</a></div></section></div><div id="search-results" class="d-flex flex-wrap justify-content-center text-muted mt-3"></div></div></div></div><aside aria-label="Scroll to Top"> <button id="back-to-top" type="button" class="btn btn-lg btn-box-shadow"> <i class="fas fa-angle-up"></i> </button></aside></div><div id="mask" class="d-none position-fixed w-100 h-100 z-1"></div><aside id="notification" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-animation="true" data-bs-autohide="false" ><div class="toast-header"> <button type="button" class="btn-close ms-auto" data-bs-dismiss="toast" aria-label="Close" ></button></div><div class="toast-body text-center pt-0"><p class="px-2 mb-3">Доступна новая версия контента.</p><button type="button" class="btn btn-primary" aria-label="Update"> Обновить </button></div></aside><script> document.addEventListener('DOMContentLoaded', () => { SimpleJekyllSearch({ searchInput: document.getElementById('search-input'), resultsContainer: document.getElementById('search-results'), json: '/assets/js/data/search.json', searchResultTemplate: '<article class="px-1 px-sm-2 px-lg-4 px-xl-0"><header><h2><a href="{url}">{title}</a></h2><div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1"> {categories} {tags}</div></header><p>{snippet}</p></article>', noResultsText: '<p class="mt-5">Упс! Ничего не найдено.</p>', templateMiddleware: function(prop, value, template) { if (prop === 'categories') { if (value === '') { return `${value}`; } else { return `<div class="me-sm-4"><i class="far fa-folder fa-fw"></i>${value}</div>`; } } if (prop === 'tags') { if (value === '') { return `${value}`; } else { return `<div><i class="fa fa-tag fa-fw"></i>${value}</div>`; } } } }); }); </script>

@@ -1,2 +1,5 @@
 User-agent: *
-Allow: /
+
+Disallow: /norobots/
+
+Sitemap: https://mr-dxdy.github.io/sitemap.xml
